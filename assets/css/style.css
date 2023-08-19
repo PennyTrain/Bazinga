@@ -5,142 +5,220 @@
     * Browsers: last 4 version
     */
 
-    /*
+/*
     * Prefixed by https://autoprefixer.github.io
     * PostCSS: v8.4.14,
     * Autoprefixer: v10.4.7
     * Browsers: last 4 version
     */
 
-    /* css reset: http://meyerweb.com/eric/tools/css/reset/ 
+/* css reset: http://meyerweb.com/eric/tools/css/reset/ 
     v2.0 | 20110126
     License: none (public domain)
     */
 
-    html,
-    body,
-    div,
-    span,
-    applet,
-    object,
-    iframe,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    blockquote,
-    pre,
-    a,
-    abbr,
-    acronym,
-    address,
-    big,
-    cite,
-    code,
-    del,
-    dfn,
-    em,
-    img,
-    ins,
-    kbd,
-    q,
-    s,
-    samp,
-    small,
-    strike,
-    strong,
-    sub,
-    sup,
-    tt,
-    var,
-    b,
-    u,
-    i,
-    center,
-    dl,
-    dt,
-    dd,
-    ol,
-    ul,
-    li,
-    fieldset,
-    form,
-    label,
-    legend,
-    table,
-    caption,
-    tbody,
-    tfoot,
-    thead,
-    tr,
-    th,
-    td,
-    article,
-    aside,
-    canvas,
-    details,
-    embed,
-    figure,
-    figcaption,
-    footer,
-    header,
-    hgroup,
-    menu,
-    nav,
-    output,
-    ruby,
-    section,
-    summary,
-    time,
-    mark,
-    audio,
-    video {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        font-size: 100%;
-        font: inherit;
-        vertical-align: baseline;
-    }
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
 
-    /* HTML5 display-role reset for older browsers */
-    article,
-    aside,
-    details,
-    figcaption,
-    figure,
-    footer,
-    header,
-    hgroup,
-    menu,
-    nav,
-    section {
-        display: block;
-    }
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
 
-    body {
-        line-height: 1;
-    }
+body {
+    line-height: 1;
+}
 
-    ol,
-    ul {
-        list-style: none;
-    }
+ol,
+ul {
+    list-style: none;
+}
 
-    blockquote,
-    q {
-        quotes: none;
-    }
+blockquote,
+q {
+    quotes: none;
+}
 
-    blockquote:before,
-    blockquote:after,
-    q:before,
-    q:after {
-        content: '';
-        content: none;
-    }
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
 
-    /*end of css reset*/
+/*end of css reset*/
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+body {
+    background-image: url(../imgs/night.png);
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div #start{
+    gap: 10px;
+}
+
+#start {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 25rem;
+    width: 50rem;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 10px;
+    font-family: bungee, sans-serif;
+    color: white;
+    font-size: 5em;
+}
+
+.game-bio {
+    font-size: 20px;
+    text-align: center;
+}
+
+#play {
+    height: 6rem;
+    width: 9rem;
+    border-radius: 10px;
+    font-family: bungee, sans-serif;
+    font-size: 40px;
+    color: black;
+}
+
+#game-box {   
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 25rem;
+    width: 50rem;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 10px;
+    font-family: bungee, sans-serif;
+    color: white;
+    font-size: 5em;
+}
+
+#score {
+    font-size: 1.5rem;
+}
+
+#game-buttons button {
+    font-size: 7rem;
+    gap: 1rem;
+    border-radius: 10px;
+}
+
+#computer-score {
+    text-align: center;
+}
+
+#player-score{
+    text-align: center;
+}
