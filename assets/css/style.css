@@ -154,6 +154,10 @@ html {
     align-items: center
 }
 
+.hidden {
+    display: none;
+}
+
 body {
     background-image: url(../imgs/night.png);
     width: 100%;
@@ -161,10 +165,6 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-div #start{
-    gap: 10px;
 }
 
 #start {
