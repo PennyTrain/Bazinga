@@ -3,12 +3,37 @@ let gameStartButton = document.getElementById("play");
 gameStartButton.addEventListener('click', playGameModal);
 const gameBoxModal = document.getElementById("game-box");
 const startModal = document.getElementById("start");
+// Day and night switch
+let day = document.getElementById('day-night');
+day.addEventListener('click',function() {
+    document.body.classList.toggle('day');
+});
+
+let allBackButtons = document.querySelectorAll('.back-button');
+allBackButtons.forEach(backButton => {
+  backButton.addEventListener('click', mainMenu)
+})
+console.log(allBackButtons)
 
 // Rules modal and event listeners
 const rulesModal = document.getElementById("rules");
 const rulesButton = document.getElementById("rulesButton");
 console.log(rulesButton)
 rulesButton.addEventListener('click', showRules);
+
+// Settings modal and event listeners
+const settingBoxModal = document.getElementById("settings-box")
+const settingsButton = document.getElementById("settingsButton")
+console.log(settingsButton)
+settingsButton.addEventListener('click', showSettings)
+
+
+
+function showSettings() {
+console.log("showing settings!:D")
+startModal.classList.toggle("hidden")
+settingBoxModal.classList.toggle("hidden")
+}
 
 // Starts the game modal
 function playGameModal() {
@@ -18,14 +43,13 @@ function playGameModal() {
 }
 
 function showRules() {
-  const mainMenuButton = document.getElementById('back-button');
-  console.log("showing rules!:D")
-  startModal.classList.toggle("hidden")
-  rulesModal.classList.toggle("hidden")
-  mainMenuButton.addEventListener('click', mainMenu)
+  console.log("showing rules!:D");
+  startModal.classList.toggle("hidden");
+  rulesModal.classList.toggle("hidden");
 }
 
 function mainMenu() {
+  console.log("in main menu");
   window.location.reload();
 }
 

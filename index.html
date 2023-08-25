@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,14 +10,28 @@
 
     <title>Document</title>
 </head>
+
 <body>
     <div id="start">
-<h1 id="game-title"><i class="fa-solid fa-burst"></i>BAZINGA<i class="fa-solid fa-burst"></i></h1>
-<p class="game-bio">Rock<i class="fa-regular fa-gem"></i>Paper<i class="fa-regular fa-paper-plane"></i>Scissors<i class="fa-solid fa-scissors"></i></p>
-<p class="game-bio">Lizard<i class="fa-solid fa-dragon"></i>Spock<i class="fa-regular fa-hand-spock"></i></p>
-<button class="submit-button" id="play"><i class="fa-solid fa-play"></i></button>
-<br>
-<button id="rulesButton"><i class="fa-regular fa-newspaper"></i></button>
+        <h1 id="game-title"><i class="fa-solid fa-burst"></i>BAZINGA<i class="fa-solid fa-burst"></i></h1>
+        <div class="homepage-container">
+            <!-- Game short tags -->
+            <div>
+                <p class="game-bio">Rock<i class="fa-regular fa-gem"></i>Paper<i
+                        class="fa-regular fa-paper-plane"></i>Scissors<i class="fa-solid fa-scissors"></i></p>
+                <p class="game-bio">Lizard<i class="fa-solid fa-dragon"></i>Spock<i
+                        class="fa-regular fa-hand-spock"></i></p>
+            </div>
+            <!-- Game Play buttons main screen -->
+            <div>
+                <!--Button to dsplay the #game-box div-->
+                <button class="submit-button" id="play"><i class="fa-solid fa-play"></i></button>
+                <!--Button to display the #rules div-->
+                <button id="rulesButton"><i class="fa-regular fa-newspaper"></i></button>
+                <!--Switch for night and day-->
+                <button id="settingsButton"><i class="fa-solid fa-gears"></i></button>
+            </div>
+        </div>
     </div>
     <div class="hidden" id="game-box">
         <h1><i class="fa-solid fa-burst"></i> BAZINGA <i class="fa-solid fa-burst"></i></h1>
@@ -40,19 +55,19 @@
             <button data-value="rock" class="game-buttons" id="rock">
                 <i class="fa-regular fa-gem"></i>
             </button>
-    
+
             <button data-value="paper" class="game-buttons" id="paper">
                 <i class="fa-regular fa-paper-plane"></i>
             </button>
-    
+
             <button data-value="scissors" class="game-buttons" id="scissors">
                 <i class="fa-solid fa-scissors"></i>
             </button>
-    
+
             <button data-value="lizard" class="game-buttons" id="lizard">
                 <i class="fa-solid fa-dragon"></i>
             </button>
-    
+
             <button data-value="spock" class="game-buttons" id="spock">
                 <i class="fa-regular fa-hand-spock"></i>
             </button>
@@ -60,22 +75,55 @@
     </div>
     <div id="rules" class="rules hidden">
         <h2>How to Play <i class="fa-solid fa-burst"></i>BAZINGA!<i class="fa-solid fa-burst"></i></h2>
-        <p>BAZINGA is a twist on your average Rock Paper Scissor game and adds 2 extra elements, lizard and spock.</p>
+        <p class="rulesBio">BAZINGA is a twist on your average Rock Paper Scissor game and adds 2 extra elements, lizard
+            and
+            spock.</p>
         <ul>
-            <li>Scissors cuts paper</li>
-            <li>Paper covers rock</li>
-            <li>Rock crushes lizard</li>
-            <li>Lizard poisons Spock</li>
-            <li>Spock smashes scissors</li>
-            <li>Scissors decapitates lizard</li>
-            <li>Lizard eats paper</li>
-            <li>Paper disproves Spock</li>
-            <li>Spock vaporizes rock</li>
-            <li>Rock crushes scissors</li>
+            <li class="ruleItem"><i class="fa-solid fa-scissors iLeft"></i> cuts <i
+                    class="fa-regular fa-paper-plane iRight"></i></li>
+            <li class="ruleItem"><i class="fa-regular fa-paper-plane iLeft"></i> covers <i
+                    class="fa-regular fa-gem iRight"></i></li>
+            <li class="ruleItem"><i class="fa-regular fa-gem iLeft"></i> crushes <i
+                    class="fa-solid fa-dragon iRight"></i></li>
+            <li class="ruleItem"><i class="fa-solid fa-dragon iLeft"></i> poisons <i
+                    class="fa-regular fa-hand-spock iRight"></i></li>
+            <li class="ruleItem"><i class="fa-regular fa-hand-spock iLeft"></i> smashes <i
+                    class="fa-solid fa-scissors iRight"></i></li>
+            <li class="ruleItem"><i class="fa-solid fa-scissors iLeft"></i> decapitates <i
+                    class="fa-solid fa-dragon iRight"></i></li>
+            <li class="ruleItem"><i class="fa-solid fa-dragon iLeft"></i> eats <i
+                    class="fa-regular fa-paper-plane iRight"></i></li>
+            <li class="ruleItem"><i class="fa-regular fa-paper-plane iLeft"></i> disproves <i
+                    class="fa-regular fa-hand-spock iRight"></i></li>
+            <li class="ruleItem"><i class="fa-regular fa-hand-spock iLeft"></i> vaporizes <i
+                    class="fa-regular fa-gem iRight"></i></li>
+            <li class="ruleItem"><i class="fa-regular fa-gem iLeft ruleTen"></i> crushes <i
+                    class="fa-solid fa-scissors iRight"></i></li>
         </ul>
         <button id="back-button" class="back-button">Back</button>
     </div>
+    <div id="settings-box" class="settings hidden">
+        <h2>Settings</h2>
+        <div class="dayNight">
+            <p>Day/Night</p>
+            <label class="switch">
+                <input type="checkbox" id="day-night">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <div class="matchAmount">
+            <p>3 / 5</p>
+            <label class="switch">
+                <input type="checkbox" id="matchCount">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <button id="back-button" class="back-button">Back</button>
+    </div>
+
+
     <script src="assets/js/script.js"></script>
     <script src="https://kit.fontawesome.com/f302dda9d1.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
