@@ -5,8 +5,8 @@ const gameBoxModal = document.getElementById("game-box");
 const startModal = document.getElementById("start");
 // Day and night switch
 let day = document.getElementById('day-night');
-day.addEventListener('click',function() {
-    document.body.classList.toggle('day');
+day.addEventListener('click', function () {
+  document.body.classList.toggle('day');
 });
 
 let allBackButtons = document.querySelectorAll('.back-button');
@@ -30,9 +30,9 @@ settingsButton.addEventListener('click', showSettings)
 
 
 function showSettings() {
-console.log("showing settings!:D")
-startModal.classList.toggle("hidden")
-settingBoxModal.classList.toggle("hidden")
+  console.log("showing settings!:D")
+  startModal.classList.toggle("hidden")
+  settingBoxModal.classList.toggle("hidden")
 }
 
 // Starts the game modal
@@ -62,12 +62,12 @@ let result;
 let player;
 let computer;
 
-allButtons.forEach(button => button.addEventListener('click', function() {
+allButtons.forEach(button => button.addEventListener('click', function () {
   console.log(button.getAttribute('data-value'))
   player = button.getAttribute('data-value')
   console.log(player)
   computerChoice();
-  playerScore.textContent  = `Player: ${player}`;
+  playerScore.textContent = `Player: ${player}`;
   computerScore.textContent = `Computer: ${computer}`;
   resultMatch.textContent = checkWin(player, computer);
 }))
@@ -153,8 +153,8 @@ function win() {
 }
 
 
-function lose(){
-  aiScore++ 
+function lose() {
+  aiScore++
   aiScoreBoard.innerHTML = aiScore;
 }
 

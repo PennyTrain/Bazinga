@@ -211,12 +211,12 @@ body {
 ul {
     list-style: none;
     padding: 0;
-  }
-  
-  li {
-    padding: 8px 0; 
-  }
-  
+}
+
+li {
+    padding: 8px 0;
+}
+
 
 .settings {
     background-color: rgba(0, 0, 0, 0.6);
@@ -232,8 +232,9 @@ ul {
     gap: 3rem;
     padding: 5rem;
 }
+
 .settings h2 {
-    font-size:3rem;
+    font-size: 3rem;
 }
 
 .game-bio {
@@ -306,7 +307,7 @@ button {
     font-family: bungee, sans-serif;
 }
 
-.settingsButton{
+.settingsButton {
     font-size: 2rem;
     border-radius: 10px;
 }
@@ -314,6 +315,7 @@ button {
 .back-button:hover {
     color: darkslateblue;
 }
+
 /*Switch styles for the day and night*/
 
 .day {
