@@ -154,10 +154,6 @@ html {
     align-items: center
 }
 
-.hidden {
-    display: none;
-}
-
 body {
     background-image: url(../imgs/night.png);
     width: 100%;
@@ -179,23 +175,30 @@ body {
     font-size: 5em;
 }
 
+.rules {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 50rem;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 10px;
+    font-family: bungee, sans-serif;
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 5rem;
+}
+
 .game-bio {
     font-size: 20px;
     text-align: center;
 }
 
-#play {
-    height: 6rem;
-    width: 9rem;
-    border-radius: 10px;
-    font-family: bungee, sans-serif;
-    font-size: 40px;
-    color: black;
-}
-
 #game-box {   
     background-color: rgba(0, 0, 0, 0.6);
-    height: 25rem;
+    height: auto;
+    padding: 20px;
     width: 50rem;
     margin: 0 auto;
     text-align: center;
@@ -215,10 +218,58 @@ body {
     border-radius: 10px;
 }
 
+.game-buttons:hover {
+    color: darkslateblue;
+}
+
+#rulesButton {
+    height: 6rem;
+    width: 9rem;
+    font-size: 40px;
+    border-radius: 10px;
+    font-family: bungee, sans-serif;
+    color: black;
+}
+
+#rulesButton:hover{
+    color: darkslateblue;
+}
+
+.fa-solid fa-burst:hover{
+    color:orange;
+}
+
+#play {
+    height: 6rem;
+    width: 9rem;
+    border-radius: 10px;
+    font-family: bungee, sans-serif;
+    font-size: 40px;
+    color: black;
+}
+
+#play:hover {
+    color: darkslateblue;
+}
+
+.back-button {
+    font-size: 2rem;
+    border-radius: 10px;
+    font-family: bungee, sans-serif;
+}
+
+.back-button:hover {
+    color: darkslateblue;
+}
+
 #computer-score {
     text-align: center;
 }
 
 #player-score{
     text-align: center;
+}
+
+.hidden {
+    display: none;
 }

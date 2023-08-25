@@ -14,45 +14,66 @@
 <h1 id="game-title"><i class="fa-solid fa-burst"></i>BAZINGA<i class="fa-solid fa-burst"></i></h1>
 <p class="game-bio">Rock<i class="fa-regular fa-gem"></i>Paper<i class="fa-regular fa-paper-plane"></i>Scissors<i class="fa-solid fa-scissors"></i></p>
 <p class="game-bio">Lizard<i class="fa-solid fa-dragon"></i>Spock<i class="fa-regular fa-hand-spock"></i></p>
-<button class="submit-button" id="play">START</button>
+<button class="submit-button" id="play"><i class="fa-solid fa-play"></i></button>
+<br>
+<button id="rulesButton"><i class="fa-regular fa-newspaper"></i></button>
     </div>
     <div class="hidden" id="game-box">
-        <h1> BAZINGA </h1>
+        <h1><i class="fa-solid fa-burst"></i> BAZINGA <i class="fa-solid fa-burst"></i></h1>
         <i class="fa-solid fa-robot"></i>
         <div id="score">
-            <div id="player-score">
-                <h3>Your Score:</h3>
+            <div>
+                <div id="player-score">
+                </div>
+                <div id="computer-score">
+                </div>
+                <div id="match-result">
+                </div>
             </div>
-            <div id="computer-score">
-                <h3>Robots Score:</h3>
-            </div>
-            <div id="match-result">
-                <h3>Match Result</h3>
+            <div>
+                <p>Computer total:<span id="ai-score" placeholder="0">0</span></p>
+                <p>Your total:<span id="user-score">0</span></p>
             </div>
         </div>
         <div id="game-buttons">
 
-            <button class="game-buttons" id="rock">
+            <button data-value="rock" class="game-buttons" id="rock">
                 <i class="fa-regular fa-gem"></i>
             </button>
     
-            <button class="game-buttons" id="paper">
+            <button data-value="paper" class="game-buttons" id="paper">
                 <i class="fa-regular fa-paper-plane"></i>
             </button>
     
-            <button class="game-buttons" id="scissors">
+            <button data-value="scissors" class="game-buttons" id="scissors">
                 <i class="fa-solid fa-scissors"></i>
             </button>
     
-            <button class="game-buttons" id="lizard">
+            <button data-value="lizard" class="game-buttons" id="lizard">
                 <i class="fa-solid fa-dragon"></i>
             </button>
     
-            <button class="game-buttons" id="spock">
+            <button data-value="spock" class="game-buttons" id="spock">
                 <i class="fa-regular fa-hand-spock"></i>
             </button>
-    
         </div>
+    </div>
+    <div id="rules" class="rules hidden">
+        <h2>How to Play <i class="fa-solid fa-burst"></i>BAZINGA!<i class="fa-solid fa-burst"></i></h2>
+        <p>BAZINGA is a twist on your average Rock Paper Scissor game and adds 2 extra elements, lizard and spock.</p>
+        <ul>
+            <li>Scissors cuts paper</li>
+            <li>Paper covers rock</li>
+            <li>Rock crushes lizard</li>
+            <li>Lizard poisons Spock</li>
+            <li>Spock smashes scissors</li>
+            <li>Scissors decapitates lizard</li>
+            <li>Lizard eats paper</li>
+            <li>Paper disproves Spock</li>
+            <li>Spock vaporizes rock</li>
+            <li>Rock crushes scissors</li>
+        </ul>
+        <button id="back-button" class="back-button">Back</button>
     </div>
     <script src="assets/js/script.js"></script>
     <script src="https://kit.fontawesome.com/f302dda9d1.js" crossorigin="anonymous"></script>
