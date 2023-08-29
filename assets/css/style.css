@@ -163,16 +163,20 @@ body {
     background-size: cover;
 }
 
+h1 {
+    margin: 0 auto;
+}
 .start-box {
     background-color: rgba(0, 0, 0, 0.6);
-    height: 25rem;
-    width: 50rem;
+    height: auto;
+    width: auto;
     margin: 0 auto;
     text-align: center;
     border-radius: 10px;
     font-family: bungee, sans-serif;
     color: white;
     font-size: 5em;
+    padding: 3rem;
 }
 
 .rules {
@@ -192,6 +196,10 @@ body {
 
 .rulesBio {
     font-size: 1.3rem;
+}
+
+.rules button {
+    margin: 0 auto;
 }
 
 .iLeft {
@@ -220,7 +228,7 @@ li {
 
 .settings {
     background-color: rgba(0, 0, 0, 0.6);
-    width: 25rem;
+    width: auto;
     margin: 0 auto;
     text-align: center;
     border-radius: 10px;
@@ -237,6 +245,14 @@ li {
     font-size: 3rem;
 }
 
+.settings button {
+    margin: 0 auto;
+}
+
+.settings p {
+    margin-bottom: .5rem;
+}
+
 .homepage-container {
     font-size: 20px;
     text-align: center;
@@ -245,9 +261,9 @@ li {
 #game-box {
     background-color: rgba(0, 0, 0, 0.6);
     height: auto;
-    padding: 20px;
-    width: 50rem;
+    width: auto;
     margin: 0 auto;
+    padding: 2rem;
     text-align: center;
     border-radius: 10px;
     font-family: bungee, sans-serif;
@@ -263,8 +279,6 @@ button {
     cursor: pointer;
 }
 
-
-
 .btn-main {
     height: 6rem;
     width: 9rem;
@@ -273,14 +287,6 @@ button {
     font-family: bungee, sans-serif;
     color: black;
 }
-
-.game-tags {
-    display: flex;
-    flex-direction: row;
-    margin-top: 12px;
-    gap: 10px;
-}
-
 
 .btn-main:hover {
     color: darkslateblue;
@@ -294,6 +300,20 @@ button {
 
 .game-buttons:hover {
     color: darkslateblue;
+}
+
+.gamepage-back-button{
+    height: 3rem;
+    width: 3rem;
+    font-size: 1rem;
+    float:right;
+}
+
+.game-tags {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    gap: .8rem;
 }
 
 /*Switch styles for the day and night*/
@@ -413,7 +433,11 @@ input:checked+.slider:before {
         font-size: 1.5rem;
         gap: 1.5;
         padding: 2rem;
+    }
 
+    .game-tags {
+        gap: .2rem;
+        flex-direction:column;
     }
 }
 
