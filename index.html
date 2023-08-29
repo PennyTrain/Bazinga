@@ -13,31 +13,35 @@
 
 <body>
     <!--Homepage start gamebox, which displays start button, rules button and settings button-->
-    <div id="start">
-        <h1 id="game-title"><i class="fa-solid fa-burst"></i>BAZINGA<i class="fa-solid fa-burst"></i></h1>
+    <div id="start" class="start-box">
+        <h1 id="game-title" class="start-title"><i class="fa-solid fa-burst hide-icon"></i>BAZINGA<i class="fa-solid fa-burst hide-icon"></i></h1>
         <div class="homepage-container">
             <!-- Game short tags -->
-            <div id="game-short-tags">
-                <p class="game-bio">Rock<i class="fa-regular fa-gem"></i>Paper<i
-                        class="fa-regular fa-paper-plane"></i>Scissors<i class="fa-solid fa-scissors"></i></p>
-                <p class="game-bio">Lizard<i class="fa-solid fa-dragon"></i>Spock<i
-                        class="fa-regular fa-hand-spock"></i></p>
+            <div class="game-tags" id="game-short-tags">
+                <p class="game-bio">Rock<i class="fa-regular fa-gem"></i></p>
+                <p class="game-bio">Paper<i class="fa-regular fa-paper-plane"></i></p>
+                <p class="game-bio">Scissors<i class="fa-solid fa-scissors"></i></p>
+                <p class="game-bio">Lizard<i class="fa-solid fa-dragon"></i></p>
+                <p class="game-bio">Spock<i class="fa-regular fa-hand-spock"></i></p>
             </div>
             <!-- Game Play buttons main screen -->
             <div>
-                <!--Button to dsplay the #game-box div-->
-                <button class="submit-button" id="play"><i class="fa-solid fa-play"></i></button>
                 <!--Button to display the #rules div-->
-                <button id="rulesButton"><i class="fa-regular fa-newspaper"></i></button>
+                <button id="rulesButton" class="btn-main"><i class="fa-regular fa-newspaper"></i></button>
+                <!--Button to display the #game-box div-->
+                <button class="submit-button btn-main" id="play"><i class="fa-solid fa-play"></i></button>
                 <!--Button to display the #setting-box div-->
-                <button id="settingsButton"><i class="fa-solid fa-gears"></i></button>
+                <button id="settingsButton" class="btn-main"><i class="fa-solid fa-gears"></i></button>
             </div>
         </div>
     </div>
     <!--Gamebox, which displays the buttons to play, along with score counters-->
     <div class="hidden" id="game-box">
-        <h1><i class="fa-solid fa-burst"></i> BAZINGA <i class="fa-solid fa-burst"></i></h1>
+        <h1><i class="fa-solid fa-burst hide-icon"></i> BAZINGA <i class="fa-solid fa-burst hide-icon"></i></h1>
         <i class="fa-solid fa-robot"></i>
+        <div>
+             <button id="back-button" class="back-button btn-main">Back</button>
+        </div>
         <div id="score">
             <div>
                 <div id="player-score">
@@ -48,8 +52,8 @@
                 </div>
             </div>
             <div>
-                <p>Computer total:<span id="ai-score" placeholder="0">0</span></p>
-                <p>Your total:<span id="user-score">0</span></p>
+                <p>Computer:<span id="ai-score" placeholder="0">0</span></p>
+                <p>Player:<span id="user-score">0</span></p>
             </div>
         </div>
         <!--Game buttons-->
@@ -78,33 +82,33 @@
     </div>
     <!--Rules box, display rules as a list, along with a short description of the game-->
     <div id="rules" class="rules hidden">
-        <h2>How to Play <i class="fa-solid fa-burst"></i>BAZINGA!<i class="fa-solid fa-burst"></i></h2>
+        <h2>How to Play <i class="fa-solid fa-burst hide-icon"></i>BAZINGA!<i class="fa-solid fa-burst hide-icon"></i></h2>
         <p class="rulesBio">BAZINGA is a twist on your average Rock Paper Scissor game and adds 2 extra elements, lizard
             and
             spock.</p>
         <ul>
-                <!--Scissors cuts paper-->
+            <!--Scissors cuts paper-->
             <li class="ruleItem"><i class="fa-solid fa-scissors iLeft"></i> cuts <i
                     class="fa-regular fa-paper-plane iRight"></i></li>
-                    <!--Paper covers rock-->
+            <!--Paper covers rock-->
             <li class="ruleItem"><i class="fa-regular fa-paper-plane iLeft"></i> covers <i
                     class="fa-regular fa-gem iRight"></i></li>
-                    <!--Rock crushes lizard-->
+            <!--Rock crushes lizard-->
             <li class="ruleItem"><i class="fa-regular fa-gem iLeft"></i> crushes <i
                     class="fa-solid fa-dragon iRight"></i></li>
-                    <!--Lizard poisons spock-->
+            <!--Lizard poisons spock-->
             <li class="ruleItem"><i class="fa-solid fa-dragon iLeft"></i> poisons <i
                     class="fa-regular fa-hand-spock iRight"></i></li>
-                    <!--Spock smashes scissors-->
+            <!--Spock smashes scissors-->
             <li class="ruleItem"><i class="fa-regular fa-hand-spock iLeft"></i> smashes <i
                     class="fa-solid fa-scissors iRight"></i></li>
-                    <!--Scissors decapitates lizard-->
+            <!--Scissors decapitates lizard-->
             <li class="ruleItem"><i class="fa-solid fa-scissors iLeft"></i> decapitates <i
                     class="fa-solid fa-dragon iRight"></i></li>
-                    <!--Lizard eats paper-->
+            <!--Lizard eats paper-->
             <li class="ruleItem"><i class="fa-solid fa-dragon iLeft"></i> eats <i
                     class="fa-regular fa-paper-plane iRight"></i></li>
-                    <!--Paper disproves spock-->
+            <!--Paper disproves spock-->
             <li class="ruleItem"><i class="fa-regular fa-paper-plane iLeft"></i> disproves <i
                     class="fa-regular fa-hand-spock iRight"></i></li>
             <li class="ruleItem"><i class="fa-regular fa-hand-spock iLeft"></i> vaporizes <i
@@ -112,27 +116,34 @@
             <li class="ruleItem"><i class="fa-regular fa-gem iLeft ruleTen"></i> crushes <i
                     class="fa-solid fa-scissors iRight"></i></li>
         </ul>
-        <button id="back-button" class="back-button">Back</button>
+        <button id="back-button" class="back-button btn-main">Back</button>
     </div>
     <div id="settings-box" class="settings hidden">
         <h2>Settings</h2>
         <div class="dayNight">
             <p>Day/Night</p>
             <label class="switch">
-                <input type="checkbox" id="day-night">
+                <input type="checkbox" id="day-night-toggler">
                 <span class="slider round"></span>
             </label>
         </div>
         <div class="matchAmount">
             <p>3 / 5</p>
             <label class="switch">
-                <input type="checkbox" id="matchCount">
+                <input type="checkbox" id="match-amount-toggle">
                 <span class="slider round"></span>
             </label>
         </div>
-        <button id="back-button" class="back-button">Back</button>
+        <button id="back-button" class="back-button btn-main">Back</button>
     </div>
-
+    <div id="game-end" class="hidden game-end">
+        <h2>Game Over!</h2>
+    <p>The score was</p>
+    <p>Computer Score: <span id="final-computer-score"></span></p>
+    <p>Player Score: <span id="final-player-score"></span></p>
+    <p id="final-game-messsage"></p>
+    <button id="retry" class="btn-main"><i class="fa-solid fa-rotate-right"></i></button>
+    </div>
 
     <script src="assets/js/script.js"></script>
     <script src="https://kit.fontawesome.com/f302dda9d1.js" crossorigin="anonymous"></script>

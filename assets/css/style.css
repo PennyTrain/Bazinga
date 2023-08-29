@@ -163,7 +163,7 @@ body {
     background-size: cover;
 }
 
-#start {
+.start-box {
     background-color: rgba(0, 0, 0, 0.6);
     height: 25rem;
     width: 50rem;
@@ -237,7 +237,7 @@ li {
     font-size: 3rem;
 }
 
-.game-bio {
+.homepage-container {
     font-size: 20px;
     text-align: center;
 }
@@ -263,6 +263,29 @@ button {
     cursor: pointer;
 }
 
+
+
+.btn-main {
+    height: 6rem;
+    width: 9rem;
+    font-size: 40px;
+    border-radius: 10px;
+    font-family: bungee, sans-serif;
+    color: black;
+}
+
+.game-tags {
+    display: flex;
+    flex-direction: row;
+    margin-top: 12px;
+    gap: 10px;
+}
+
+
+.btn-main:hover {
+    color: darkslateblue;
+}
+
 #game-buttons button {
     font-size: 7rem;
     gap: 1rem;
@@ -273,52 +296,9 @@ button {
     color: darkslateblue;
 }
 
-#rulesButton {
-    height: 6rem;
-    width: 9rem;
-    font-size: 40px;
-    border-radius: 10px;
-    font-family: bungee, sans-serif;
-    color: black;
-}
-
-#rulesButton:hover {
-    color: darkslateblue;
-}
-
-#play {
-    height: 6rem;
-    width: 9rem;
-    border-radius: 10px;
-    font-family: bungee, sans-serif;
-    font-size: 40px;
-    color: black;
-}
-
-
-
-#play:hover {
-    color: darkslateblue;
-}
-
-.back-button {
-    font-size: 2rem;
-    border-radius: 10px;
-    font-family: bungee, sans-serif;
-}
-
-.settingsButton {
-    font-size: 2rem;
-    border-radius: 10px;
-}
-
-.back-button:hover {
-    color: darkslateblue;
-}
-
 /*Switch styles for the day and night*/
 
-.day {
+.day-mode {
     background-image: url(/assets/imgs/day.png);
 }
 
@@ -407,6 +387,54 @@ input:checked+.slider:before {
     text-align: center;
 }
 
+.game-end {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: auto;
+    padding: 20px;
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 10px;
+    font-family: bungee, sans-serif;
+    color: white;
+    font-size: 5em;
+}
+.game-end h2 {
+    font-size: 3rem;
+}
+
+.game-end p {
+    font-size: 2rem;
+}
+/*media queries*/
+
+@media screen and (max-width: 450px) {
+    .settings {
+        font-size: 1.5rem;
+        gap: 1.5;
+        padding: 2rem;
+
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .rules {
+        gap: .5rem;
+        padding: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .start-title {
+        font-size: 3rem;
+    }
+
+    .hide-icon{
+        display: none;
+    }
+}
+
+
+
 .hidden {
     display: none;
 }
@@ -414,3 +442,4 @@ input:checked+.slider:before {
 .display {
     display: contents;
 }
+

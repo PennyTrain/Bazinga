@@ -3,10 +3,41 @@ let gameStartButton = document.getElementById("play");
 gameStartButton.addEventListener('click', playGameModal);
 const gameBoxModal = document.getElementById("game-box");
 const startModal = document.getElementById("start");
-// Day and night switch
-let day = document.getElementById('day-night');
-day.addEventListener('click', function () {
-  document.body.classList.toggle('day');
+
+// Check if the night mode is set in sessionStorage
+let nightMode = localStorage.getItem("nightMode") === "True";
+// Function to set night mode state and update background image
+function setNightMode (state) {
+  if (state) {
+    console.log(state)
+    document.body.classList.add("day-mode");
+    document.body.style.backgroundImage = "url('/assets/imgs/night.png')";
+    localStorage.setItem("nightMode", "True");
+  } else {
+    document.body.classList.remove("day-mode");
+    document.body.style.backgroundImage = "url('/assets/imgs/day.png')";
+    localStorage.setItem("nightMode", "False");
+  }
+  let themeToggler = document.getElementById('day-night-toggler');
+  themeToggler.checked = state;
+}
+
+// Function to toggle night mode
+function toggleNightMode() {
+  nightMode = !nightMode;
+  setNightMode(nightMode);
+}
+
+// Apply the initial night mode state
+setNightMode(nightMode);
+
+// Add event listener to the theme toggler
+let themeToggler = document.getElementById('day-night-toggler');
+themeToggler.addEventListener("change", toggleNightMode);
+
+// Handle page reload
+window.addEventListener("load", () => {
+  setNightMode(nightMode);
 });
 
 let allBackButtons = document.querySelectorAll('.back-button');
@@ -27,8 +58,6 @@ const settingsButton = document.getElementById("settingsButton")
 console.log(settingsButton)
 settingsButton.addEventListener('click', showSettings)
 
-
-
 function showSettings() {
   console.log("showing settings!:D")
   startModal.classList.toggle("hidden")
@@ -48,9 +77,12 @@ function showRules() {
   rulesModal.classList.toggle("hidden");
 }
 
+let retryButton = document.getElementById("retry")
+retryButton.addEventListener('click', mainMenu)
+
 function mainMenu() {
   console.log("in main menu");
-  window.location.reload();
+  location.reload();
 }
 
 const resultMatch = document.querySelector('#match-result');
@@ -61,16 +93,44 @@ const allButtons = document.querySelectorAll('.game-buttons');
 let result;
 let player;
 let computer;
+let roundsPlayed = 0;
+let matchAmount = 4;
+let matchToggle = document.getElementById("match-amount-toggle")
+matchToggle.addEventListener('change', amountOfGames)
+
+function amountOfGames(matchAmount){
+  if (matchToggle.checked)  {
+    matchAmount = 6
+    console.log(matchAmount)
+    localStorage.setItem("gameAmount", "6");
+  } else {
+    matchAmount = 4
+    localStorage.setItem("gameAmount", "4");
+    console.log(matchAmount)
+  }
+}
 
 allButtons.forEach(button => button.addEventListener('click', function () {
-  console.log(button.getAttribute('data-value'))
-  player = button.getAttribute('data-value')
-  console.log(player)
-  computerChoice();
-  playerScore.textContent = `Player: ${player}`;
-  computerScore.textContent = `Computer: ${computer}`;
-  resultMatch.textContent = checkWin(player, computer);
-}))
+  if (localStorage.getItem("gameAmount") == 4 ) {
+    matchAmount = 4;
+  } else {
+    matchAmount = 6;
+  }
+  if (roundsPlayed < matchAmount) {
+    player = button.getAttribute('data-value');
+    computerChoice();
+    playerScore.textContent = `Player: ${player}`;
+    computerScore.textContent = `Computer: ${computer}`;
+    resultMatch.textContent = checkWin(player, computer);
+    roundsPlayed++;
+    if (roundsPlayed === matchAmount) {
+      // Display game over message or perform any necessary actions
+      console.log("Game Over!");
+      window.alert(`End of your ${matchAmount - 1} match game`);
+      endGameResults();
+    }
+  }
+}));
 
 function computerChoice() {
   const randNum = Math.floor(Math.random() * 5) + 1;
@@ -152,9 +212,28 @@ function win() {
   userScoreBoard.innerHTML = userScore;
 }
 
-
 function lose() {
   aiScore++
   aiScoreBoard.innerHTML = aiScore;
 }
+
+const endGameBoxModal = document.getElementById("game-end")
+function endGameResults() {
+  gameBoxModal.classList.toggle("hidden");
+  endGameBoxModal.classList.toggle("hidden");
+  let finalComputerScore = document.getElementById("final-computer-score");
+  let finalPlayerScore = document.getElementById("final-player-score");
+  finalPlayerScore.textContent = `${userScore}`;
+  finalComputerScore.textContent = `${aiScore}`;
+  let finalMessageWin = 'Congrats you won! Smashed It!!'
+  let finalMessageLoss = 'BoooHooo You lost :('
+  let finalMessageContainer = document.getElementById('final-game-messsage');
+  if (aiScore > userScore) {
+    finalMessageContainer.innerText = finalMessageLoss
+  } else {
+    finalMessageContainer.innerText = finalMessageWin
+  }
+}
+
+
 
