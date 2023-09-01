@@ -181,7 +181,7 @@ h1 {
 
 .rules {
     background-color: rgba(0, 0, 0, 0.6);
-    width: 50rem;
+    width: 40rem;
     margin: 0 auto;
     text-align: center;
     border-radius: 10px;
@@ -441,6 +441,27 @@ input:checked+.slider:before {
 
 /*media queries*/
 
+@media screen and (max-width: 375px) {
+
+    #game-buttons button{
+        font-size: 4rem;
+    }
+    
+    .game-tags {
+        flex-direction:column;
+    }
+
+    body {
+        height: 100%;
+        width: 100%;
+    }
+
+    .rules {
+        height: 40rem;
+    }
+
+}
+
 @media screen and (max-width: 450px) {
     .settings {
         font-size: 1.5rem;
@@ -461,11 +482,16 @@ input:checked+.slider:before {
         font-size: 1.5rem;
     }
 
+    .game-tags {
+        gap: .2rem;
+        flex-direction:column;
+    }
+
     .start-title {
         font-size: 3rem;
     }
 
-    h1 i .hide-icon{
+    div .hide-icon{
         display: none;
     }
 
@@ -476,7 +502,24 @@ input:checked+.slider:before {
     .iRight{
         margin-left: .2rem;
     }
+
+    .gamebox-header{
+        font-size: 2.5rem;
+    }
+
+    .game-box {
+        font-size: 3.5rem;
+    }
+
 }
+
+@media screen and (max-width: 700px) {
+    div .hide-icon{
+        display: none;
+    }
+}
+
+
 
 
 

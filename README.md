@@ -1,39 +1,35 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+<h1 align="center">Bazinga</h1>  
 
-Welcome,
+## Introduction
+<br>
+<p>Bazinga is an online game derived from your average rock paper scissors, with and influence of the Big Bang Theory, Rock Paper Scissors Lizard Spock. In which players play against the computer to win the game!</p>
+[View live project here]
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **July 26th, 2023**
+## User Experience
 
-## Codeanywhere Reminders
+-   ### User Stories
+ 
+-   #### First Time Visitor Goals
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+ 1. As a first time visitor, I want the game to be clear.
+ 2. As a first time visitor, I want to easily navigate the game.
+ 3. As a first time visitor, I want the game to be aesthetically pleasing and accessible.
 
-`python3 -m http.server`
+-   #### Returning Visitor Goals
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+ 1. As a returning visitor, I want to enjoy the game.
+ 2. As a returning visitor, I want to play and show friends.
+ 3. As a returning visitor, I want to experiment with the different settings.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+-   #### Frequent Visitor Goals
 
-`http_server`
+ 1. As a frequent visitor, I want to have fun with the different settings.
+ 2. As a frequent visitor, I want the game to be smooth.
+ 3. As a frequent visitor, I want to enjoy playing against a computer!
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+-   #### Organization Goals
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
-
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
----
-
-Happy coding!
+ 1. As an organization we want to promote and make the game more popular.
+ 2. As an organization we want to have a base of people who play for when we realease new games.
+ 3. As an organization we want to be easily accessible to interested parties.
