@@ -90,18 +90,23 @@
 ![Phone day score page](./assets/imgs/phone-day-end.png)
 ![Phone night score page](./assets/imgs/phone-night-end.png)
 
-## Features
-
-* Responsive on all device sizes.
-
-* Toggling between day and night.
-
 ### Languages Used
 
 * [HTML](https://en.wikipedia.org/wiki/HTML)
 * [CSS](https://en.wikipedia.org/wiki/CSS)
 * [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
+### Typography
+
+Bungee, sans-serif are being used to keep the website clear, the fonts were found using Google Fonts. 
+
+## Features
+
+* Responsive on all device sizes.
+
+* Toggling between day and night.
+
+* The user can toggle between 3-5 games.
 
 ## Common Features
 
@@ -115,7 +120,13 @@
 
 ### Results page
 
+### Future Enhancements
 
+* In the future I wish enable users to make an account, therefore they can keep track of how many times they have one against the computer,
+
+* In the future, I wish to incorporate some kind of score board, where it shows how well other players are doing vs yourself.
+
+* In the future, I wish to enable difficulty levels.
  ## Deployment
 
 The project was deployed to GitHub Pages using the following steps...
