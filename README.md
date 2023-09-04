@@ -104,21 +104,17 @@ Bungee, sans-serif are being used to keep the website clear, the fonts were foun
 
 * Responsive on all device sizes.
 
-* Toggling between day and night.
+* There is day and night modes in the game.
 
-* The user can toggle between 3-5 games.
+![Screenshot of homepage in day mode](./assets/imgs/browser-day-homepage.png)
 
-## Common Features
+![Screenshot of homepage in night mode](./assets/imgs/browser-night-homepage.png)
 
-### Home page
+* The user can toggle between 3-5 games aswell as the day/night mode in the settings.
 
-### Game page
 
-### Settings
 
-### Rules
 
-### Results page
 
 ### Future Enhancements
 
