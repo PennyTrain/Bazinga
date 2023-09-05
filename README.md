@@ -3,7 +3,7 @@
 ## Introduction
 <br>
 <p>Bazinga is an online game derived from your average rock paper scissors, with and influence of the Big Bang Theory, Rock Paper Scissors Lizard Spock. In which players play against the computer to win the game!</p>
-[View live project here]
+[View live project here](https://pennytrain.github.io/lizardspock/)
 
 ![Am I responsive screenshot](./assets/imgs/amiresponsive-screenshot.png)
 
@@ -130,6 +130,11 @@ Bungee, sans-serif are being used to keep the website clear, the fonts were foun
 
 * Along with this when a rule is hovered over it increases in size to be better displayed.
 
+* The game box buttons light up blue when hovered over, along with text displaying above keeping score count. It also shows what exactly the player and computer picked.
+
+* The buttons for the games are icons opposed to text. The rock is a diamond, because the best rock is a diamond!
+
+![Screenshot of the game in day mode](./assets/imgs/browser-day-game.png)
 
 
 
@@ -146,6 +151,11 @@ Bungee, sans-serif are being used to keep the website clear, the fonts were foun
 * In the future, I wish to incorporate some kind of score board, where it shows how well other players are doing vs yourself.
 
 * In the future, I wish to enable difficulty levels.
+
+### Testing
+
+* CSS W3C Validator
+![W3C CSS Validator screenshot](./assets/imgs/css.validator.png)
  ## Deployment
 
 The project was deployed to GitHub Pages using the following steps...
