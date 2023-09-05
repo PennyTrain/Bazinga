@@ -9,13 +9,12 @@ let nightMode = localStorage.getItem("nightMode") === "True";
 // Function to set night mode state and update background image
 function setNightMode (state) {
   if (state) {
-    console.log(state)
-    document.body.classList.add("day-mode");
-    document.body.style.backgroundImage = "url('../imgs/night.png')";
+    document.body.classList.remove("day-mode");
+    document.body.classList.add("night-mode");
     localStorage.setItem("nightMode", "True");
   } else {
-    document.body.classList.remove("day-mode");
-    document.body.style.backgroundImage = "url('../imgs/day.png')";
+    document.body.classList.add("day-mode");
+    document.body.classList.remove("night-mode");
     localStorage.setItem("nightMode", "False");
   }
   let themeToggler = document.getElementById('day-night-toggler');
