@@ -100,9 +100,19 @@
 
 Bungee, sans-serif are being used to keep the website clear, the fonts were found using Google Fonts. 
 
+### Color Scheme
+
+* Day mode color scheme
+![Screenshot of the day color contrast grid](./assets/imgs/day-color-grid.png)
+
+* Night mode color scheme
+![Screenshot of the night color contrast grid](./assets/imgs/night-contrast-grid.png)
+
+* In these screenshots it shows that a lot of the colors do not have a good contrast, therefore I got around this using a black opaque background with white text.
+
 ## Features
 
-* Responsive on all device sizes.
+* Responsive on landscape device sizes.
 
 * There is day and night modes in the game.
 
@@ -111,6 +121,19 @@ Bungee, sans-serif are being used to keep the website clear, the fonts were foun
 ![Screenshot of homepage in night mode](./assets/imgs/browser-night-homepage.png)
 
 * The user can toggle between 3-5 games aswell as the day/night mode in the settings.
+
+![Screenshot of the settings in day mode](./assets/imgs/browser-day-settings.png)
+
+* In the rules, I have used icons instead of words to display the meaning. 
+
+![Screenshot of the rules in day mode](./assets/imgs/browser-day-rules.png)
+
+* Along with this when a rule is hovered over it increases in size to be better displayed.
+
+
+
+
+
 
 
 

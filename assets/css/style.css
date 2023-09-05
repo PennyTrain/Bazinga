@@ -155,7 +155,7 @@ html {
 }
 
 body {
-    background-image: url(assets\imgs\night.png);
+    background-image: url(../imgs/night.png);
     background-color: #341B5D;
     width: 100%;
     height: 100vh;
@@ -327,7 +327,7 @@ button {
 /*Switch styles for the day and night*/
 
 .day-mode {
-    background-image: url(C:\Users\penny\repositories\lizardspock\lizardspock\assets\imgs\day.png);
+    background-image: url(../imgs/day.png);
     background-color: #0B94A9;
 }
 
