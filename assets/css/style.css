@@ -223,7 +223,7 @@ li {
 }
 
 /*End of rules styling*/
-
+/*Start of settings styling*/
 .settings {
     font-size: 2rem;
     display: flex;
@@ -231,6 +231,18 @@ li {
     gap: 3rem;
 }
 
+.settings h2 {
+    font-size: 3rem;
+}
+
+.settings button {
+    margin: 0 auto;
+}
+
+.settings p {
+    margin-bottom: .5rem;
+}
+/*End of settings styling*/
 /* Game end styles start */
 .game-end {
     gap: 1rem;
@@ -255,18 +267,6 @@ li {
 
 /* Game end box styles end */
 
-.settings h2 {
-    font-size: 3rem;
-}
-
-.settings button {
-    margin: 0 auto;
-}
-
-.settings p {
-    margin-bottom: .5rem;
-}
-
 .homepage-container {
     font-size: 20px;
     text-align: center;
@@ -277,9 +277,6 @@ li {
     flex-direction: column;
     gap: .5rem;
     margin-top: 5px;
-}
-
-#score {
     font-size: 1.5rem;
 }
 

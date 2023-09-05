@@ -11,11 +11,11 @@ function setNightMode (state) {
   if (state) {
     console.log(state)
     document.body.classList.add("day-mode");
-    document.body.style.backgroundImage = "url('/assets/imgs/night.png')";
+    document.body.style.backgroundImage = "url('../imgs/night.png')";
     localStorage.setItem("nightMode", "True");
   } else {
     document.body.classList.remove("day-mode");
-    document.body.style.backgroundImage = "url('/assets/imgs/day.png')";
+    document.body.style.backgroundImage = "url('../imgs/day.png')";
     localStorage.setItem("nightMode", "False");
   }
   let themeToggler = document.getElementById('day-night-toggler');
