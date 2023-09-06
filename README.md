@@ -5,7 +5,7 @@
 <p>Bazinga is an online game derived from your average rock paper scissors, with and influence of the Big Bang Theory, Rock Paper Scissors Lizard Spock. In which players play against the computer to win the game!</p>
 [View live project here](https://pennytrain.github.io/lizardspock/)
 
-![Am I responsive screenshot](./assets/imgs/amiresponsive-screenshot.png)
+![Am I responsive screenshot](./assets/imgs/readme.images/amiresponsive-screenshot.png)
 
 
 ## User Experience
@@ -42,53 +42,53 @@
 
 * Windows day and night homepage
 
-![Window day start](./assets/imgs/window-day-start.png)
-![Window night start](./assets/imgs/window-night-start.png)
+![Window day start](./assets/imgs/readme.images/window-day-start.png)
+![Window night start](./assets/imgs/readme.images/window-night-start.png)
 
 * Window day and night game page
 
-![Window day game](./assets/imgs/window-day-game.png)
-![Window night game](./assets/imgs/window-night-game.png)
+![Window day game](./assets/imgs/readme.images/window-day-game.png)
+![Window night game](./assets/imgs/readme.images/window-night-game.png)
 
 * Window day and night settings
 
-![Window day settings](./assets/imgs/window-day-settings.png)
-![Window night settings](./assets/imgs/window-night-settings.png)
+![Window day settings](./assets/imgs/readme.images/window-day-settings.png)
+![Window night settings](./assets/imgs/readme.images/window-night-settings.png)
 
 * Window day and night rules
 
-![Window day rules](./assets/imgs/window-day-rules.png)
-![Window night rules](./assets/imgs/window-night-rules.png)
+![Window day rules](./assets/imgs/readme.images/window-day-rules.png)
+![Window night rules](./assets/imgs/readme.images/window-night-rules.png)
 
 * Window day and night score page
 
-![Window day score page](./assets/imgs/window-day-end.png)
-![Window night score page](./assets/imgs/window-night-end.png)
+![Window day score page](./assets/imgs/readme.images/window-day-end.png)
+![Window night score page](./assets/imgs/readme.images/window-night-end.png)
 
 * Phone day and night homepage
 
-![Phone day start](./assets/imgs/phone-day-start.png)
-![Phone night start](./assets/imgs/phone-night-start.png)
+![Phone day start](./assets/imgs/readme.images/phone-day-start.png)
+![Phone night start](./assets/imgs/readme.images/phone-night-start.png)
 
 * Phone day and night game page
 
-![Phone day game](./assets/imgs/phone-day-game.png)
-![Phone night game](./assets/imgs/phone-night-game.png)
+![Phone day game](./assets/imgs/readme.images/phone-day-game.png)
+![Phone night game](./assets/imgs/readme.images/phone-night-game.png)
 
 * Phone day and night settings
 
-![Phone day settings](./assets/imgs/phone-day-settings.png)
-![Phone night settings](./assets/imgs/phone-night-settings.png)
+![Phone day settings](./assets/imgs/readme.images/phone-day-settings.png)
+![Phone night settings](./assets/imgs/readme.images/phone-night-settings.png)
 
 * Phone day and night rules
 
-![Phone day rules](./assets/imgs/phone-day-rules.png)
-![Phone night rules](./assets/imgs/phone-night-settings.png)
+![Phone day rules](./assets/imgs/readme.images/phone-day-rules.png)
+![Phone night rules](./assets/imgs/readme.images/phone-night-settings.png)
 
 * Phone day and night score page
 
-![Phone day score page](./assets/imgs/phone-day-end.png)
-![Phone night score page](./assets/imgs/phone-night-end.png)
+![Phone day score page](./assets/imgs/readme.images/phone-day-end.png)
+![Phone night score page](./assets/imgs/readme.images/phone-night-end.png)
 
 ### Languages Used
 
@@ -103,10 +103,10 @@ Bungee, sans-serif are being used to keep the website clear, the fonts were foun
 ### Color Scheme
 
 * Day mode color scheme
-![Screenshot of the day color contrast grid](./assets/imgs/day-color-grid.png)
+![Screenshot of the day color contrast grid](./assets/imgs/testing.images/day-color-grid.png)
 
 * Night mode color scheme
-![Screenshot of the night color contrast grid](./assets/imgs/night-contrast-grid.png)
+![Screenshot of the night color contrast grid](./assets/imgs/testing.images/night-contrast-grid.png)
 
 * In these screenshots it shows that a lot of the colors do not have a good contrast, therefore I got around this using a black opaque background with white text.
 
@@ -116,17 +116,17 @@ Bungee, sans-serif are being used to keep the website clear, the fonts were foun
 
 * There is day and night modes in the game.
 
-![Screenshot of homepage in day mode](./assets/imgs/browser-day-homepage.png)
+![Screenshot of homepage in day mode](./assets/imgs/readme.images/browser-day-homepage.png)
 
-![Screenshot of homepage in night mode](./assets/imgs/browser-night-homepage.png)
+![Screenshot of homepage in night mode](./assets/imgs/readme.images/browser-night-homepage.png)
 
 * The user can toggle between 3-5 games aswell as the day/night mode in the settings.
 
-![Screenshot of the settings in day mode](./assets/imgs/browser-day-settings.png)
+![Screenshot of the settings in day mode](./assets/imgs/readme.images/browser-day-settings.png)
 
 * In the rules, I have used icons instead of words to display the meaning. 
 
-![Screenshot of the rules in day mode](./assets/imgs/browser-day-rules.png)
+![Screenshot of the rules in day mode](./assets/imgs/readme.images/browser-day-rules.png)
 
 * Along with this when a rule is hovered over it increases in size to be better displayed.
 
@@ -134,9 +134,9 @@ Bungee, sans-serif are being used to keep the website clear, the fonts were foun
 
 * The buttons for the games are icons opposed to text. The rock is a diamond, because the best rock is a diamond!
 
-![Screenshot of the game in day mode](./assets/imgs/browser-day-game.png)
+![Screenshot of the game in day mode](./assets/imgs/readme.images/browser-day-game.png)
 
-
+* At the 
 
 
 
@@ -154,8 +154,10 @@ Bungee, sans-serif are being used to keep the website clear, the fonts were foun
 
 ### Testing
 
-* CSS W3C Validator
-![W3C CSS Validator screenshot](./assets/imgs/css.validator.png)
+* HTML W3 Validator
+![W3 HTML Validator screenshot](./assets/imgs/testing.images/html-validator.png)
+* CSS W3 Validator
+![W3 CSS Validator screenshot](./assets/imgs/testing.images/css.validator.png)
  ## Deployment
 
 The project was deployed to GitHub Pages using the following steps...

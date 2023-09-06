@@ -61,7 +61,7 @@
             </div>
         </div>
         <!--Game buttons-->
-        <div id="game-buttons" class="game-buttons">
+        <div id="game-buttons">
             <!--Rock button-->
             <button data-value="rock" class="game-buttons" id="rock">
                 <i class="fa-regular fa-gem"></i>
@@ -143,12 +143,13 @@
         <button class="back-button btn-main">Back</button>
     </div>
     <!-- The end of game box displays who won along with the scores -->
-    <div id="game-end" class="main-box hidden game-end">
+    <div id="game-end" class="main-box hidden game-end-container">
         <h2>Game Over!</h2>
-        <p>The score was</p>
-        <p>Computer Score:<span id="final-computer-score"></span></p>
-        <p>Player Score:<span id="final-player-score"></span></p>
-        <p id="final-game-messsage"></p>
+        <div class="final-score-container">
+        <p>Computer:<span id="final-computer-score"></span></p>
+        <p>Player:<span id="final-player-score"></span></p>
+        </div>
+        <p class="final-message" id="final-game-messsage"></p>
         <button id="retry" class="btn-main"><i class="fa-solid fa-rotate-right"></i></button>
     </div>
 

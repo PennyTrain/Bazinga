@@ -175,6 +175,11 @@ body {
     padding: 2rem;
 }
 
+.highlight-computer-choice {
+    background-color: red;
+    transition: background-color 2s;
+}
+
 .start-box {
     font-size: 5em;
 }
@@ -183,17 +188,21 @@ body {
     font-size: 5em;
 }
 
+#match-result {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 /*Styling for .rules*/
 .rules {
     width: 40rem;
-    font-size: 1.6rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.rulesBio {
-    font-size: 1.3rem;
+.rules h2 {
+    font-size: 2rem;
 }
 
 .rules button {
@@ -243,25 +252,34 @@ li {
 }
 /*End of settings styling*/
 /* Game end styles start */
-.game-end {
-    gap: 1rem;
-}
-
-.game-end h2 {
+.game-end-container h2 {
     font-size: 4rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
-.game-end p {
+.final-message-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.game-end-container p {
     font-size: 2rem;
     gap: 1rem;
     display: flex;
     flex-direction: column;
 }
 
-.game-end button {
+.game-end-container .final-message {
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+.game-end-container button {
     margin: 0 auto;
+    margin-top: 1rem;
 }
 
 /* Game end box styles end */
@@ -275,7 +293,8 @@ li {
     display: flex;
     flex-direction: column;
     gap: .5rem;
-    margin-top: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 1.5rem;
 }
 
@@ -296,9 +315,8 @@ button {
     color: darkslateblue;
 }
 
-.game-buttons button {
+.game-buttons {
     font-size: 7rem;
-    gap: 1rem;
     border-radius: 10px;
 }
 
@@ -428,6 +446,9 @@ input:checked+.slider:before {
     .game-tags {
         flex-direction: column;
     }
+    .game-end-container {
+        width: 70%;
+    }
 
     body {
         height: 100%;
@@ -448,17 +469,13 @@ input:checked+.slider:before {
         gap: .2rem;
         flex-direction: column;
     }
-
-    .rules {
-        height: 100%;
-    }
 }
 
 @media screen and (max-width: 550px) {
     .rules {
         gap: .3rem;
         padding: 2rem;
-        font-size: 1.5rem;
+        width: 80%;
     }
 
     .game-tags {
@@ -488,6 +505,7 @@ input:checked+.slider:before {
 
     .game-box {
         font-size: 3.5rem;
+        width: 80%;
     }
 
 }

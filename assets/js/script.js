@@ -43,35 +43,29 @@ let allBackButtons = document.querySelectorAll('.back-button');
 allBackButtons.forEach(backButton => {
   backButton.addEventListener('click', mainMenu)
 })
-console.log(allBackButtons)
 
 // Rules modal and event listeners
 const rulesModal = document.getElementById("rules");
 const rulesButton = document.getElementById("rulesButton");
-console.log(rulesButton)
 rulesButton.addEventListener('click', showRules);
 
 // Settings modal and event listeners
 const settingBoxModal = document.getElementById("settings-box")
 const settingsButton = document.getElementById("settingsButton")
-console.log(settingsButton)
 settingsButton.addEventListener('click', showSettings)
 
 function showSettings() {
-  console.log("showing settings!:D")
   startModal.classList.toggle("hidden")
   settingBoxModal.classList.toggle("hidden")
 }
 
 // Starts the game modal
 function playGameModal() {
-  console.log("IN play game")
   startModal.classList.toggle("hidden")
   gameBoxModal.classList.toggle("hidden")
 }
 
 function showRules() {
-  console.log("showing rules!:D");
   startModal.classList.toggle("hidden");
   rulesModal.classList.toggle("hidden");
 }
@@ -80,7 +74,6 @@ let retryButton = document.getElementById("retry")
 retryButton.addEventListener('click', mainMenu)
 
 function mainMenu() {
-  console.log("in main menu");
   location.reload();
 }
 
@@ -93,34 +86,41 @@ let result;
 let player;
 let computer;
 let roundsPlayed = 0;
-let matchAmount = 4;
+let matchAmount;
 let matchToggle = document.getElementById("match-amount-toggle")
 matchToggle.addEventListener('change', amountOfGames)
 
 function amountOfGames(matchAmount){
   if (matchToggle.checked)  {
-    matchAmount = 6
-    console.log(matchAmount)
-    localStorage.setItem("gameAmount", "6");
+    matchAmount = 2
+    localStorage.setItem("gameAmount", "2");
   } else {
     matchAmount = 4
     localStorage.setItem("gameAmount", "4");
-    console.log(matchAmount)
   }
 }
 
 allButtons.forEach(button => button.addEventListener('click', function () {
-  if (localStorage.getItem("gameAmount") == 4 ) {
-    matchAmount = 4;
+  console.log(button)
+  if (localStorage.getItem("gameAmount") == 2 ) {
+    matchAmount = 2;
   } else {
-    matchAmount = 6;
+    matchAmount = 4;
   }
+
   if (roundsPlayed < matchAmount) {
     player = button.getAttribute('data-value');
     computerChoice();
     playerScore.textContent = `Player: ${player}`;
     computerScore.textContent = `Computer: ${computer}`;
     resultMatch.textContent = checkWin(player, computer);
+    if (resultMatch.textContent == "You Win!") {
+      resultMatch.style.color = "green";
+    } else if (resultMatch.textContent == "Draw!")  {
+      resultMatch.style.color = "white";
+    } else if (resultMatch.textContent == "You Lose!")  {
+      resultMatch.style.color = "red";
+    }
     roundsPlayed++;
     if (roundsPlayed === matchAmount) {
       // Display game over message or perform any necessary actions
@@ -138,7 +138,7 @@ function computerChoice() {
       computer = "rock";
       break;
     case 2:
-      computer = "paper";
+      computer = "paper"; 
       break;
     case 3:
       computer = "scissors";
@@ -149,14 +149,22 @@ function computerChoice() {
     case 5:
       computer = "spock";
       break;
-
   }
+  const computerChoiceButton = document.querySelector(`[data-value="${computer}"]`);
+  computerChoiceButton.classList.add('highlight-computer-choice');
+  
+  // Remove the highlighting after 2 seconds
+  setTimeout(() => {
+    computerChoiceButton.classList.remove('highlight-computer-choice');
+  }, 2000); // 2000 milliseconds = 2 seconds
 }
+
 
 function checkWin(player, computer) {
   console.log(player)
   console.log(computer)
   if (player === computer) {
+    matchAmount - 1;
     return "Draw!";
   } else if (computer === "rock") {
     if (player === "paper" || player === "spock") {
