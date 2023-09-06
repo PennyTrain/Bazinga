@@ -7,7 +7,7 @@ const startModal = document.getElementById("start");
 // Check if the night mode is set in sessionStorage
 let nightMode = localStorage.getItem("nightMode") === "True";
 // Function to set night mode state and update background image
-function setNightMode (state) {
+function setNightMode(state) {
   if (state) {
     document.body.classList.remove("day-mode");
     document.body.classList.add("night-mode");
@@ -41,8 +41,8 @@ window.addEventListener("load", () => {
 
 let allBackButtons = document.querySelectorAll('.back-button');
 allBackButtons.forEach(backButton => {
-  backButton.addEventListener('click', mainMenu)
-})
+  backButton.addEventListener('click', mainMenu);
+});
 
 // Rules modal and event listeners
 const rulesModal = document.getElementById("rules");
@@ -50,19 +50,19 @@ const rulesButton = document.getElementById("rulesButton");
 rulesButton.addEventListener('click', showRules);
 
 // Settings modal and event listeners
-const settingBoxModal = document.getElementById("settings-box")
-const settingsButton = document.getElementById("settingsButton")
-settingsButton.addEventListener('click', showSettings)
+const settingBoxModal = document.getElementById("settings-box");
+const settingsButton = document.getElementById("settingsButton");
+settingsButton.addEventListener('click', showSettings);
 
 function showSettings() {
-  startModal.classList.toggle("hidden")
-  settingBoxModal.classList.toggle("hidden")
+  startModal.classList.toggle("hidden");
+  settingBoxModal.classList.toggle("hidden");
 }
 
 // Starts the game modal
 function playGameModal() {
-  startModal.classList.toggle("hidden")
-  gameBoxModal.classList.toggle("hidden")
+  startModal.classList.toggle("hidden");
+  gameBoxModal.classList.toggle("hidden");
 }
 
 function showRules() {
@@ -70,8 +70,8 @@ function showRules() {
   rulesModal.classList.toggle("hidden");
 }
 
-let retryButton = document.getElementById("retry")
-retryButton.addEventListener('click', mainMenu)
+let retryButton = document.getElementById("retry");
+retryButton.addEventListener('click', mainMenu);
 
 function mainMenu() {
   location.reload();
@@ -87,22 +87,22 @@ let player;
 let computer;
 let roundsPlayed = 0;
 let matchAmount;
-let matchToggle = document.getElementById("match-amount-toggle")
-matchToggle.addEventListener('change', amountOfGames)
+let matchToggle = document.getElementById("match-amount-toggle");
+matchToggle.addEventListener('change', amountOfGames);
 
-function amountOfGames(matchAmount){
-  if (matchToggle.checked)  {
-    matchAmount = 2
+function amountOfGames(matchAmount) {
+  if (matchToggle.checked) {
+    matchAmount = 2;
     localStorage.setItem("gameAmount", "2");
   } else {
-    matchAmount = 4
+    matchAmount = 4;
     localStorage.setItem("gameAmount", "4");
   }
 }
 
 allButtons.forEach(button => button.addEventListener('click', function () {
-  console.log(button)
-  if (localStorage.getItem("gameAmount") == 2 ) {
+  console.log(button);
+  if (localStorage.getItem("gameAmount") == 2) {
     matchAmount = 2;
   } else {
     matchAmount = 4;
@@ -116,9 +116,9 @@ allButtons.forEach(button => button.addEventListener('click', function () {
     resultMatch.textContent = checkWin(player, computer);
     if (resultMatch.textContent == "You Win!") {
       resultMatch.style.color = "green";
-    } else if (resultMatch.textContent == "Draw!")  {
+    } else if (resultMatch.textContent == "Draw!") {
       resultMatch.style.color = "white";
-    } else if (resultMatch.textContent == "You Lose!")  {
+    } else if (resultMatch.textContent == "You Lose!") {
       resultMatch.style.color = "red";
     }
     roundsPlayed++;
@@ -138,7 +138,7 @@ function computerChoice() {
       computer = "rock";
       break;
     case 2:
-      computer = "paper"; 
+      computer = "paper";
       break;
     case 3:
       computer = "scissors";
@@ -152,7 +152,7 @@ function computerChoice() {
   }
   const computerChoiceButton = document.querySelector(`[data-value="${computer}"]`);
   computerChoiceButton.classList.add('highlight-computer-choice');
-  
+
   // Remove the highlighting after 2 seconds
   setTimeout(() => {
     computerChoiceButton.classList.remove('highlight-computer-choice');
@@ -161,49 +161,49 @@ function computerChoice() {
 
 
 function checkWin(player, computer) {
-  console.log(player)
-  console.log(computer)
+  console.log(player);
+  console.log(computer);
   if (player === computer) {
     matchAmount - 1;
     return "Draw!";
   } else if (computer === "rock") {
     if (player === "paper" || player === "spock") {
-      win()
+      win();
       return "You Win!";
     } else {
-      lose()
+      lose();
       return "You Lose!";
     }
   } else if (computer === "paper") {
     if (player === "scissors" || player === "lizard") {
-      win()
+      win();
       return "You Win!";
     } else {
-      lose()
+      lose();
       return "You Lose!";
     }
   } else if (computer === "scissors") {
     if (player === "rock" || player === "spock") {
-      win()
+      win();
       return "You Win!";
     } else {
-      lose()
+      lose();
       return "You Lose!";
     }
   } else if (computer === "lizard") {
     if (player === "rock" || player === "scissors") {
-      win()
+      win();
       return "You Win!";
     } else {
-      lose()
+      lose();
       return "You Lose!";
     }
   } else if (computer === "spock") {
     if (player === "paper" || player === "lizard") {
-      win()
+      win();
       return "You Win!";
     } else {
-      lose()
+      lose();
       return "You Lose!";
     }
   }
@@ -215,16 +215,16 @@ let userScoreBoard = document.getElementById("user-score");
 let userScore = 0;
 
 function win() {
-  userScore++
+  userScore++;
   userScoreBoard.innerHTML = userScore;
 }
 
 function lose() {
-  aiScore++
+  aiScore++;
   aiScoreBoard.innerHTML = aiScore;
 }
 
-const endGameBoxModal = document.getElementById("game-end")
+const endGameBoxModal = document.getElementById("game-end");
 function endGameResults() {
   gameBoxModal.classList.toggle("hidden");
   endGameBoxModal.classList.toggle("hidden");
@@ -232,15 +232,12 @@ function endGameResults() {
   let finalPlayerScore = document.getElementById("final-player-score");
   finalPlayerScore.textContent = `${userScore}`;
   finalComputerScore.textContent = `${aiScore}`;
-  let finalMessageWin = 'Congrats you won! Smashed It!!'
-  let finalMessageLoss = 'BoooHooo You lost :('
+  let finalMessageWin = 'Congrats you won! Smashed It!!';
+  let finalMessageLoss = 'BoooHooo You lost :(';
   let finalMessageContainer = document.getElementById('final-game-messsage');
   if (aiScore > userScore) {
-    finalMessageContainer.innerText = finalMessageLoss
+    finalMessageContainer.innerText = finalMessageLoss;
   } else {
-    finalMessageContainer.innerText = finalMessageWin
+    finalMessageContainer.innerText = finalMessageWin;
   }
 }
-
-
-
