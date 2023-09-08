@@ -180,6 +180,11 @@ body {
     transition: background-color 2s;
 }
 
+.highlight-player-choice {
+    background-color: darkslateblue;
+    transition: background-color 2s;
+}
+
 .start-box {
     font-size: 5em;
 }
@@ -326,9 +331,6 @@ button {
     border-radius: 10px;
 }
 
-.game-buttons:hover {
-    color: darkslateblue;
-}
 
 .gamepage-back-button {
     height: 3rem;

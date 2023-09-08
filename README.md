@@ -1,11 +1,11 @@
-<h1 align="center">Bazinga</h1>  
+# Bazinga 
 
 ## Introduction
-<br>
-<p>Bazinga is an online game derived from your average rock paper scissors, with and influence of the Big Bang Theory, Rock Paper Scissors Lizard Spock. In which players play against the computer to win the game!</p>
+
+* Bazinga is an online game derived from your average rock paper scissors, with and influence of the Big Bang Theory, Rock Paper Scissors Lizard Spock. In which players play against the computer to win the game!
 [View live project here](https://pennytrain.github.io/lizardspock/)
 
-![Am I responsive screenshot](./assets/imgs/readme.images/amiresponsive-screenshot.png)
+![Am I responsive screenshot](./assets/imgs/readme-images/amiresponsive-screenshot.png)
 
 
 ## User Experience
@@ -42,53 +42,53 @@
 
 * Windows day and night homepage
 
-![Window day start](./assets/imgs/readme.images/window-day-start.png)
-![Window night start](./assets/imgs/readme.images/window-night-start.png)
+![Window day start](./assets/imgs/readme-images/window-day-start.png)
+![Window night start](./assets/imgs/readme-images/window-night-start.png)
 
 * Window day and night game page
 
-![Window day game](./assets/imgs/readme.images/window-day-game.png)
-![Window night game](./assets/imgs/readme.images/window-night-game.png)
+![Window day game](./assets/imgs/readme-images/window-day-game.png)
+![Window night game](./assets/imgs/readme-images/window-night-game.png)
 
 * Window day and night settings
 
-![Window day settings](./assets/imgs/readme.images/window-day-settings.png)
-![Window night settings](./assets/imgs/readme.images/window-night-settings.png)
+![Window day settings](./assets/imgs/readme-images/window-day-settings.png)
+![Window night settings](./assets/imgs/readme-images/window-night-settings.png)
 
 * Window day and night rules
 
-![Window day rules](./assets/imgs/readme.images/window-day-rules.png)
-![Window night rules](./assets/imgs/readme.images/window-night-rules.png)
+![Window day rules](./assets/imgs/readme-images/window-day-rules.png)
+![Window night rules](./assets/imgs/readme-images/window-night-rules.png)
 
 * Window day and night score page
 
-![Window day score page](./assets/imgs/readme.images/window-day-end.png)
-![Window night score page](./assets/imgs/readme.images/window-night-end.png)
+![Window day score page](./assets/imgs/readme-images/window-day-end.png)
+![Window night score page](./assets/imgs/readme-images/window-night-end.png)
 
 * Phone day and night homepage
 
-![Phone day start](./assets/imgs/readme.images/phone-day-start.png)
-![Phone night start](./assets/imgs/readme.images/phone-night-start.png)
+![Phone day start](./assets/imgs/readme-images/phone-day-start.png)
+![Phone night start](./assets/imgs/readme-images/phone-night-start.png)
 
 * Phone day and night game page
 
-![Phone day game](./assets/imgs/readme.images/phone-day-game.png)
-![Phone night game](./assets/imgs/readme.images/phone-night-game.png)
+![Phone day game](./assets/imgs/readme-images/phone-day-game.png)
+![Phone night game](./assets/imgs/readme-images/phone-night-game.png)
 
 * Phone day and night settings
 
-![Phone day settings](./assets/imgs/readme.images/phone-day-settings.png)
-![Phone night settings](./assets/imgs/readme.images/phone-night-settings.png)
+![Phone day settings](./assets/imgs/readme-images/phone-day-settings.png)
+![Phone night settings](./assets/imgs/readme-images/phone-night-settings.png)
 
 * Phone day and night rules
 
-![Phone day rules](./assets/imgs/readme.images/phone-day-rules.png)
-![Phone night rules](./assets/imgs/readme.images/phone-night-settings.png)
+![Phone day rules](./assets/imgs/readme-images/phone-day-rules.png)
+![Phone night rules](./assets/imgs/readme-images/phone-night-settings.png)
 
 * Phone day and night score page
 
-![Phone day score page](./assets/imgs/readme.images/phone-day-end.png)
-![Phone night score page](./assets/imgs/readme.images/phone-night-end.png)
+![Phone day score page](./assets/imgs/readme-images/phone-day-end.png)
+![Phone night score page](./assets/imgs/readme-images/phone-night-end.png)
 
 ### Languages Used
 
@@ -103,10 +103,12 @@ Bungee, sans-serif are being used to keep the website clear, the fonts were foun
 ### Color Scheme
 
 * Day mode color scheme
-![Screenshot of the day color contrast grid](./assets/imgs/testing.images/day-color-grid.png)
+---
+![Screenshot of the day color contrast grid](./assets/imgs/testing-images/day-color-grid.png)
 
 * Night mode color scheme
-![Screenshot of the night color contrast grid](./assets/imgs/testing.images/night-contrast-grid.png)
+--- 
+![Screenshot of the night color contrast grid](./assets/imgs/testing-images/night-contrast-grid.png)
 
 * In these screenshots it shows that a lot of the colors do not have a good contrast, therefore I got around this using a black opaque background with white text.
 
@@ -116,33 +118,31 @@ Bungee, sans-serif are being used to keep the website clear, the fonts were foun
 
 * There is day and night modes in the game.
 
-![Screenshot of homepage in day mode](./assets/imgs/readme.images/browser-day-homepage.png)
+![Screenshot of homepage in day mode](./assets/imgs/readme-images/browser-day-homepage.png)
 
-![Screenshot of homepage in night mode](./assets/imgs/readme.images/browser-night-homepage.png)
+![Screenshot of homepage in night mode](./assets/imgs/readme-images/browser-night-homepage.png)
 
 * The user can toggle between 3-5 games aswell as the day/night mode in the settings.
 
-![Screenshot of the settings in day mode](./assets/imgs/readme.images/browser-day-settings.png)
+![Screenshot of the settings in day mode](./assets/imgs/readme-images/browser-day-settings.png)
 
 * In the rules, I have used icons instead of words to display the meaning. 
 
-![Screenshot of the rules in day mode](./assets/imgs/readme.images/browser-day-rules.png)
+![Screenshot of the rules in day mode](./assets/imgs/readme-images/browser-day-rules.png)
 
-* Along with this when a rule is hovered over it iSSncreases in size to be better displayed.
+* Along with this when a rule is hovered over it increases in size to be better displayed.
 
 * The game box buttons light up blue when hovered over, along with text displaying above keeping score count. It also shows what exactly the player and computer picked.
 
 * The buttons for the games are icons opposed to text. The rock is a diamond, because the best rock is a diamond!
 
-![Screenshot of the game in day mode](./assets/imgs/readme.images/browser-day-game.png)
+* When the computer makes a choice, the chosen tile then glows red.
 
-* At the 
+![Screenshot of the game in day mode](./assets/imgs/readme-images/browser-day-game.png)
 
+* The game box also displays if you lose the match in red, and if you win in green.
 
-
-
-
-
+![Screenshot of the game displaying the computer and player choice, and showing that the match was lost in red.](./assets/imgs/readme-images/game-box-choices.png)
 
 ### Future Enhancements
 
@@ -155,9 +155,35 @@ Bungee, sans-serif are being used to keep the website clear, the fonts were foun
 ### Testing
 
 * HTML W3 Validator
-![W3 HTML Validator screenshot](./assets/imgs/testing.images/html-validator.png)
+![W3 HTML Validator screenshot](./assets/imgs/testing-images/html-validator.png)
+
 * CSS W3 Validator
-![W3 CSS Validator screenshot](./assets/imgs/testing.images/css.validator.png)
+![W3 CSS Validator screenshot](./assets/imgs/testing-images/css-validator.png)
+
+* JS Validator
+![JaveScript Validator screenshot](./assets/imgs/testing-images/js-validator.png)
+* Here you can see my Javascript validator as you can see there are 0 faults but are some warnings relating to version of Javascript due to me using arrow functions which is a ES6 version only method.
+
+![Testing case description screenshot](./assets/imgs/testing-images/test-case-description.png)
+
+* Test case 1 
+![Testing the homepage buttons](./assets/imgs/testing-images/homepage-test.png)
+
+* Test case 2 
+![Testing the player choice buttons](./assets/imgs/testing-images/player-choice-test.png)
+
+* Test case 3 
+![Testing the computer choice buttons](./assets/imgs/testing-images/computer-choice-test.png)
+
+* Test case 4 
+![Testing the settings buttons](./assets/imgs/testing-images/settings-test.png)
+
+* Test case 5 
+![Testing the Game Over button](./assets/imgs/testing-images/game-over-test.png)
+
+* Test case 6
+![Testing the rules button](./assets/imgs/testing-images/rules-test.png)
+
  ## Deployment
 
 The project was deployed to GitHub Pages using the following steps...

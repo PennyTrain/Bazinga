@@ -57,6 +57,11 @@ settingsButton.addEventListener('click', showSettings);
 
 function showSettings() {
   startModal.classList.toggle("hidden");
+  if (localStorage.gameAmount == 3) {
+    matchToggle.checked = true;
+  } else {
+    matchToggle.checked = false;
+  }
   settingBoxModal.classList.toggle("hidden");
 }
 
@@ -105,37 +110,37 @@ function amountOfGames(matchAmount) {
 
 allButtons.forEach(button => button.addEventListener('click', gameLogic));
 
-  function gameLogic(event) {
-    if (localStorage.getItem("gameAmount") == 3) {
-      matchAmount = 3;
-    } else {
-      matchAmount = 5;
+function gameLogic(event) {
+  if (localStorage.getItem("gameAmount") == 3) {
+    matchAmount = 3;
+  } else {
+    matchAmount = 5;
+  }
+  //how im assigning game amount in logic
+  //only need 4, stay w match amount variable, as default is 2 automatically 
+  if (roundsPlayed <= matchAmount) {
+    button = event.target;
+    player = button.getAttribute('data-value');
+    computerChoice();
+    playerScore.textContent = `Player: ${player}`;
+    computerScore.textContent = `Computer: ${computer}`;
+    resultMatch.textContent = checkWin(player, computer);
+    if (resultMatch.textContent == "You Win!") {
+      resultMatch.style.color = "green";
+    } else if (resultMatch.textContent == "Draw!") {
+      resultMatch.style.color = "white";
+    } else if (resultMatch.textContent == "You Lose!") {
+      resultMatch.style.color = "red";
     }
-    //how im assigning game amount in logic
-    //only need 4, stay w match amount variable, as default is 2 automatically 
-    if (roundsPlayed <= matchAmount) {
-      button = event.target;
-      player = button.getAttribute('data-value');
-      computerChoice();
-      playerScore.textContent = `Player: ${player}`;
-      computerScore.textContent = `Computer: ${computer}`;
-      resultMatch.textContent = checkWin(player, computer);
-      if (resultMatch.textContent == "You Win!") {
-        resultMatch.style.color = "green";
-      } else if (resultMatch.textContent == "Draw!") {
-        resultMatch.style.color = "white";
-      } else if (resultMatch.textContent == "You Lose!") {
-        resultMatch.style.color = "red";
-      }
-      if (roundsPlayed === matchAmount) {
-        // Display game over message or perform any necessary actions
-        alert("Selected amount of rounds completed");
-        setTimeout(() => {
-          endGameResults();
-        }, 2000); // 2000 milliseconds = 2 seconds
-      }
-      }
-  };
+    if (roundsPlayed === matchAmount) {
+      // Display game over message or perform any necessary actions
+      alert("Selected amount of rounds completed");
+      setTimeout(() => {
+        endGameResults();
+      }, 2000); // 2000 milliseconds = 2 seconds
+    }
+  }
+};
 
 function computerChoice() {
   allButtons.forEach(button => button.removeEventListener("click", computerChoice));
@@ -143,7 +148,7 @@ function computerChoice() {
   const randNum = Math.floor(Math.random() * 5) + 1;
   switch (randNum) {
     case 1:
-      computer = "rock"; 
+      computer = "rock";
       break;
     case 2:
       computer = "paper";
@@ -158,6 +163,7 @@ function computerChoice() {
       computer = "spock";
       break;
   }
+
   const computerChoiceButton = document.querySelector(`[data-value="${computer}"]`);
   computerChoiceButton.classList.add('highlight-computer-choice');
 
@@ -167,6 +173,12 @@ function computerChoice() {
   }, 2000); // 2000 milliseconds = 2 seconds
 }
 
+const playerChoiceButton = document.querySelectorAll(`[data-value="${player}"]`);
+playerChoiceButton.classList.add('highlight-player-choice')
+
+setTimeout(() => {
+  playerChoiceButton.classList.remove('highlight-player-choice');
+}, 2000); // 2000 milliseconds = 2 seconds
 
 function checkWin(player, computer) {
   if (player === computer) {
