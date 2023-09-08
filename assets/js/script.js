@@ -173,7 +173,6 @@ function computerChoice() {
   }, 2000); // 2000 milliseconds = 2 seconds
 }
 
-
 function checkWin(player, computer) {
   if (player === computer) {
     return "Draw !";
@@ -243,8 +242,8 @@ function endGameResults() {
   let finalPlayerScore = document.getElementById("final-player-score");
   finalPlayerScore.textContent = `${userScore}`;
   finalComputerScore.textContent = `${aiScore}`;
-  let finalMessageWin = 'Congrats you won! Smashed It!!';
-  let finalMessageLoss = 'BoooHooo You lost :(';
+  let finalMessageWin = 'Congrats you won! Smashed It';
+  let finalMessageLoss = 'Oh no! You lost';
   let finalMessageContainer = document.getElementById('final-game-messsage');
   if (aiScore > userScore) {
     finalMessageContainer.innerText = finalMessageLoss;

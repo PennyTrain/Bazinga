@@ -208,7 +208,7 @@ body {
 }
 
 .rules h2 {
-    font-size: 2rem;
+    font-size: 2.1rem;
 }
 
 .rules button {
@@ -263,32 +263,32 @@ li {
     font-size: 4rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    text-decoration: underline 5px darkgrey;
 }
 
 .final-message-container {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
     margin-top: 3rem;
 }
 
 .game-end-container p {
     font-size: 2rem;
-    gap: 1rem;
+    gap: .5rem;
     display: flex;
     flex-direction: column;
 }
 
 .game-end-container .final-message {
-    margin-top: 2rem;
+    margin-top: .5rem;
     padding: 1rem;
+    font-size: 2.5rem;
 }
 
 .game-end-container button {
     margin: 0 auto;
     margin-top: 1rem;
 }
-
 /* Game end box styles end */
 
 .homepage-container {
@@ -462,13 +462,6 @@ input:checked+.slider:before {
         height: 100%;
         width: 100%;
     }
-
-    .rules button {
-        height: 3.5rem;
-        width: 5rem;
-        font-size: 1.5rem;
-    }
-
 }
 
 @media screen and (max-width: 450px) {
@@ -481,6 +474,11 @@ input:checked+.slider:before {
 }
 
 @media screen and (max-width: 550px) {
+
+    .game-buttons{
+        font-size: 4rem;
+    }
+
     .rules {
         gap: .3rem;
         padding: 2rem;
@@ -529,13 +527,25 @@ input:checked+.slider:before {
     }
 
     .rules li {
+        font-size: 1rem;
+    }
+
+    .game-end-container h2 {
+        font-size: 2.5rem;
+    }
+    
+    .game-end-container p {
         font-size: 1.5rem;
+    }
+    
+    .game-end-container .final-message {
+        font-size: 2rem;
     }
 }
 
 @media screen and (max-width: 1204px) {
     li {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 }
 
