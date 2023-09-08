@@ -128,7 +128,7 @@ Bungee, sans-serif are being used to keep the website clear, the fonts were foun
 
 ![Screenshot of the rules in day mode](./assets/imgs/readme.images/browser-day-rules.png)
 
-* Along with this when a rule is hovered over it increases in size to be better displayed.
+* Along with this when a rule is hovered over it iSSncreases in size to be better displayed.
 
 * The game box buttons light up blue when hovered over, along with text displaying above keeping score count. It also shows what exactly the player and computer picked.
 

@@ -6,6 +6,7 @@ const startModal = document.getElementById("start");
 
 // Check if the night mode is set in sessionStorage
 let nightMode = localStorage.getItem("nightMode") === "True";
+
 // Function to set night mode state and update background image
 function setNightMode(state) {
   if (state) {
@@ -80,62 +81,69 @@ function mainMenu() {
 const resultMatch = document.querySelector('#match-result');
 const playerScore = document.querySelector('#player-score');
 const computerScore = document.querySelector('#computer-score');
-const allButtons = document.querySelectorAll('.game-buttons');
+let allButtons = document.querySelectorAll('.game-buttons');
 
 let result;
 let player;
 let computer;
 let roundsPlayed = 0;
-let matchAmount;
+let matchAmount = 0;
+let gameAmount = 0;
+
 let matchToggle = document.getElementById("match-amount-toggle");
 matchToggle.addEventListener('change', amountOfGames);
-
 function amountOfGames(matchAmount) {
   if (matchToggle.checked) {
-    matchAmount = 2;
-    localStorage.setItem("gameAmount", "2");
+    matchAmount = 3;
+    localStorage.setItem("gameAmount", "3");
   } else {
-    matchAmount = 4;
-    localStorage.setItem("gameAmount", "4");
+    matchAmount = 5;
+    localStorage.setItem("gameAmount", "5");
   }
 }
 
-allButtons.forEach(button => button.addEventListener('click', function () {
-  console.log(button);
-  if (localStorage.getItem("gameAmount") == 2) {
-    matchAmount = 2;
-  } else {
-    matchAmount = 4;
-  }
 
-  if (roundsPlayed < matchAmount) {
-    player = button.getAttribute('data-value');
-    computerChoice();
-    playerScore.textContent = `Player: ${player}`;
-    computerScore.textContent = `Computer: ${computer}`;
-    resultMatch.textContent = checkWin(player, computer);
-    if (resultMatch.textContent == "You Win!") {
-      resultMatch.style.color = "green";
-    } else if (resultMatch.textContent == "Draw!") {
-      resultMatch.style.color = "white";
-    } else if (resultMatch.textContent == "You Lose!") {
-      resultMatch.style.color = "red";
+allButtons.forEach(button => button.addEventListener('click', gameLogic));
+
+  function gameLogic(event) {
+    if (localStorage.getItem("gameAmount") == 3) {
+      matchAmount = 3;
+    } else {
+      matchAmount = 5;
     }
-    roundsPlayed++;
-    if (roundsPlayed === matchAmount) {
-      // Display game over message or perform any necessary actions
-      console.log("Game Over!");
-      window.alert(`End of your ${matchAmount - 1} match game`);
-      endGameResults();
-    }
-  }
-}));
+    //how im assigning game amount in logic
+    //only need 4, stay w match amount variable, as default is 2 automatically 
+    if (roundsPlayed <= matchAmount) {
+      button = event.target;
+      player = button.getAttribute('data-value');
+      computerChoice();
+      playerScore.textContent = `Player: ${player}`;
+      computerScore.textContent = `Computer: ${computer}`;
+      resultMatch.textContent = checkWin(player, computer);
+      if (resultMatch.textContent == "You Win!") {
+        resultMatch.style.color = "green";
+      } else if (resultMatch.textContent == "Draw!") {
+        resultMatch.style.color = "white";
+      } else if (resultMatch.textContent == "You Lose!") {
+        resultMatch.style.color = "red";
+      }
+      if (roundsPlayed === matchAmount) {
+        // Display game over message or perform any necessary actions
+        alert("Selected amount of rounds completed");
+        setTimeout(() => {
+          endGameResults();
+        }, 2000); // 2000 milliseconds = 2 seconds
+      }
+      }
+  };
 
 function computerChoice() {
+  allButtons.forEach(button => button.removeEventListener("click", computerChoice));
+  roundsPlayed++;
   const randNum = Math.floor(Math.random() * 5) + 1;
   switch (randNum) {
     case 1:
-      computer = "rock";
+      computer = "rock"; 
       break;
     case 2:
       computer = "paper";
@@ -161,11 +169,8 @@ function computerChoice() {
 
 
 function checkWin(player, computer) {
-  console.log(player);
-  console.log(computer);
   if (player === computer) {
-    matchAmount - 1;
-    return "Draw!";
+    return "Draw !";
   } else if (computer === "rock") {
     if (player === "paper" || player === "spock") {
       win();
