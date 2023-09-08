@@ -173,12 +173,6 @@ function computerChoice() {
   }, 2000); // 2000 milliseconds = 2 seconds
 }
 
-const playerChoiceButton = document.querySelectorAll(`[data-value="${player}"]`);
-playerChoiceButton.classList.add('highlight-player-choice')
-
-setTimeout(() => {
-  playerChoiceButton.classList.remove('highlight-player-choice');
-}, 2000); // 2000 milliseconds = 2 seconds
 
 function checkWin(player, computer) {
   if (player === computer) {

@@ -7,14 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&display=swap">
-    <title>Document</title>
+    <title>Bazinga!</title>
 </head>
 
 <body>
-    <!--Homepage start gamebox, which displays start button, rules button and settings button-->
+    <!--Homepage start gamebox, which displays start button, rules button and settings button -->
     <div id="start" class="main-box start-box">
         <h1 id="game-title" class="start-title"><i class="fa-solid fa-burst hide-icon"></i>BAZINGA<i
                 class="fa-solid fa-burst hide-icon"></i></h1>
+        <!-- Homepage container -->
         <div class="homepage-container">
             <!-- Game short tags -->
             <div class="game-tags" id="game-short-tags">
@@ -37,15 +38,16 @@
     </div>
     <!--Gamebox, which displays the buttons to play, along with score counters-->
     <div class="hidden main-box game-box" id="game-box">
+        <!-- Back button in the gamebox -->
         <div>
-            <button class="back-button btn-main gamepage-back-button"><i
-                    class="fa-solid fa-arrow-left"></i></button>
+            <button class="back-button btn-main gamepage-back-button"><i class="fa-solid fa-arrow-left"></i></button>
         </div>
         <h1 class="gamebox-header"><i class="fa-solid fa-burst hide-icon"></i>
             BAZINGA
             <i class="fa-solid fa-burst hide-icon"></i>
         </h1>
         <i class="fa-solid fa-robot hide-icon"></i>
+        <!-- The score box inside the gamebox -->
         <div id="score" class="score-box">
             <div>
                 <div id="player-score">
@@ -64,7 +66,7 @@
         <div id="game-buttons">
             <!--Rock button-->
             <button data-value="rock" class="game-buttons" id="rock">
-                <i data-value="rock"  class="fa-regular fa-gem"></i>
+                <i data-value="rock" class="fa-regular fa-gem"></i>
             </button>
             <!--Paper button-->
             <button data-value="paper" class="game-buttons" id="paper">
@@ -116,16 +118,20 @@
             <!--Paper disproves spock-->
             <li class="ruleItem"><i class="fa-regular fa-paper-plane iLeft"></i> disproves <i
                     class="fa-regular fa-hand-spock iRight"></i></li>
+            <!-- Spock vaporizes rock-->
             <li class="ruleItem"><i class="fa-regular fa-hand-spock iLeft"></i> vaporizes <i
                     class="fa-regular fa-gem iRight"></i></li>
+            <!-- Rock crushes scissors-->
             <li class="ruleItem"><i class="fa-regular fa-gem iLeft ruleTen"></i> crushes <i
                     class="fa-solid fa-scissors iRight"></i></li>
         </ul>
+        <!-- Rules back button-->
         <button class="back-button btn-main">Back</button>
     </div>
     <!-- The settings for the game where the player can toggle between day and night along with how many games the player prefers-->
     <div id="settings-box" class="main-box settings hidden">
         <h2>Settings</h2>
+        <!-- Day and night toggle-->
         <div class="dayNight">
             <p>Day/Night</p>
             <label class="switch">
@@ -133,6 +139,7 @@
                 <span class="slider round"></span>
             </label>
         </div>
+        <!-- Match amount toggle-->
         <div class="matchAmount">
             <p>5 / 3</p>
             <label class="switch">
@@ -140,16 +147,19 @@
                 <span class="slider round"></span>
             </label>
         </div>
+        <!-- Settings back button-->
         <button class="back-button btn-main">Back</button>
     </div>
     <!-- The end of game box displays who won along with the scores -->
     <div id="game-end" class="main-box hidden game-end-container">
         <h2>Game Over!</h2>
+        <!-- Final score container-->
         <div class="final-score-container">
-        <p>Computer:<span id="final-computer-score"></span></p>
-        <p>Player:<span id="final-player-score"></span></p>
+            <p>Computer:<span id="final-computer-score"></span></p>
+            <p>Player:<span id="final-player-score"></span></p>
         </div>
         <p class="final-message" id="final-game-messsage"></p>
+        <!-- Game over back button-->
         <button id="retry" class="btn-main"><i class="fa-solid fa-rotate-right"></i></button>
     </div>
 
