@@ -146,7 +146,7 @@ Bungee, sans-serif are being used to keep the website clear, the fonts were foun
 
 ### Future Enhancements
 
-* In the future I wish enable users to make an account, therefore they can keep track of how many times they have one against the computer,
+* In the future I wish enable users to make an account, therefore they can keep track of how many times they have won against the computer.
 
 * In the future, I wish to incorporate some kind of score board, where it shows how well other players are doing vs yourself.
 
