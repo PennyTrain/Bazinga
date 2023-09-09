@@ -184,6 +184,9 @@ Bungee, sans-serif are being used to keep the website clear, the fonts were foun
 * Test case 6
 ![Testing the rules button](./assets/imgs/testing-images/rules-test.png)
 
+* Lighthouse report 
+![Lighthouse report](./assets/imgs/testing-images/lighthouse-test.png)
+
  ## Deployment
 
 The project was deployed to GitHub Pages using the following steps...

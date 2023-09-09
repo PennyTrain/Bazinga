@@ -12,7 +12,7 @@
 
 <body>
     <!--Homepage start gamebox, which displays start button, rules button and settings button -->
-    <div id="start" class="main-box start-box">
+    <div id="homepage" class="main-box start-box">
         <h1 id="game-title" class="start-title"><i class="fa-solid fa-burst hide-icon"></i>BAZINGA<i
                 class="fa-solid fa-burst hide-icon"></i></h1>
         <!-- Homepage container -->
@@ -28,14 +28,11 @@
             <!-- Game Play buttons main screen -->
             <div>
                 <!--Button to display the #rules div-->
-                <button id="rulesButton" class="btn-main"><aria-label>Button to access the rules</aria-label><i
-                        class="fa-regular fa-newspaper"></i></button>
+                <button id="rulesButton" class="btn-main"><i class="fa-regular fa-newspaper"></i></button>
                 <!--Button to display the #game-box div-->
-                <button class="submit-button btn-main" id="play"><aria-label>Button to access the game</aria-label><i
-                        class="fa-solid fa-play"></i></button>
+                <button class="submit-button btn-main" id="play"><i class="fa-solid fa-play"></i></button>
                 <!--Button to display the #setting-box div-->
-                <button id="settingsButton" class="btn-main"><aria-label>Button to access the settings</aria-label><i
-                        class="fa-solid fa-gears"></i></button>
+                <button id="settingsButton" class="btn-main"><i class="fa-solid fa-gears"></i></button>
             </div>
         </div>
     </div>
@@ -68,23 +65,23 @@
         <!--Game buttons-->
         <div id="game-buttons">
             <!--Rock button-->
-            <button data-value="rock" class="game-buttons" id="rock"><aria-label>Rock button</aria-label>
+            <button data-value="rock" class="game-buttons" id="rock">
                 <i data-value="rock" class="fa-regular fa-gem"></i>
             </button>
             <!--Paper button-->
-            <button data-value="paper" class="game-buttons" id="paper"><aria-label>Paper button</aria-label>
+            <button data-value="paper" class="game-buttons" id="paper">
                 <i data-value="paper" class="fa-regular fa-paper-plane"></i>
             </button>
             <!--Scissor button-->
-            <button data-value="scissors" class="game-buttons" id="scissors"><aria-label>Scissors button</aria-label>
+            <button data-value="scissors" class="game-buttons" id="scissors">
                 <i data-value="scissors" class="fa-solid fa-scissors"></i>
             </button>
             <!--Lizard button-->
-            <button data-value="lizard" class="game-buttons" id="lizard"><aria-label>Lizard button</aria-label>
+            <button data-value="lizard" class="game-buttons" id="lizard">
                 <i data-value="lizard" class="fa-solid fa-dragon"></i>
             </button>
             <!--Spock button-->
-            <button data-value="spock" class="game-buttons" id="spock"><aria-label>Spock button</aria-label>
+            <button data-value="spock" class="game-buttons" id="spock">
                 <i data-value="spock" class="fa-regular fa-hand-spock"></i>
             </button>
         </div>
@@ -98,78 +95,37 @@
             spock.</p>
         <ul>
             <!--Scissors cuts paper-->
-            <li class="ruleItem"><i class="fa-solid fa-scissors iLeft"></i>
-                <aria-label>Scissors</aria-label>
-                 cuts 
-                <aria-label>Paper</aria-label>
-                <i class="fa-regular fa-paper-plane iRight"></i>
-            </li>
+            <li class="ruleItem"><i class="fa-solid fa-scissors iLeft"></i> cuts <i
+                    class="fa-regular fa-paper-plane iRight"></i></li>
             <!--Paper covers rock-->
-            <li class="ruleItem"><i class="fa-regular fa-paper-plane iLeft"></i>
-                <aria-label>Paper</aria-label>
-                 covers 
-                <aria-label>Rock</aria-label>
-                 <i class="fa-regular fa-gem iRight"></i>
-            </li>
+            <li class="ruleItem"><i class="fa-regular fa-paper-plane iLeft"></i> covers <i
+                    class="fa-regular fa-gem iRight"></i></li>
             <!--Rock crushes lizard-->
-            <li class="ruleItem"><i class="fa-regular fa-gem iLeft"></i>
-                <aria-label>Rock</aria-label>
-                 crushes 
-                 <aria-label>Dragon</aria-label>
-                <i class="fa-solid fa-dragon iRight"></i>
-            </li>
+            <li class="ruleItem"><i class="fa-regular fa-gem iLeft"></i> crushes <i
+                    class="fa-solid fa-dragon iRight"></i></li>
             <!--Lizard poisons spock-->
-            <li class="ruleItem"><i class="fa-solid fa-dragon iLeft"></i>
-                <aria-label>Dragon</aria-label>
-                 poisons 
-                 <aria-label>Spock</aria-label>
-                 <i class="fa-regular fa-hand-spock iRight"></i>
-            </li>
+            <li class="ruleItem"><i class="fa-solid fa-dragon iLeft"></i> poisons <i
+                    class="fa-regular fa-hand-spock iRight"></i></li>
             <!--Spock smashes scissors-->
-            <li class="ruleItem"><i class="fa-regular fa-hand-spock iLeft"></i>
-                <aria-label>Spock</aria-label>
-                 smashes 
-                 <aria-label>Scissors</aria-label>
-                 <i class="fa-solid fa-scissors iRight"></i>
-            </li>
+            <li class="ruleItem"><i class="fa-regular fa-hand-spock iLeft"></i> smashes <i
+                    class="fa-solid fa-scissors iRight"></i></li>
             <!--Scissors decapitates lizard-->
-            <li class="ruleItem"><i class="fa-solid fa-scissors iLeft"></i>
-                <aria-label>Scissors</aria-label>
-                 decapitates 
-                 <aria-label>Dragon</aria-label>
-                 <i class="fa-solid fa-dragon iRight"></i>
-            </li>
+            <li class="ruleItem"><i class="fa-solid fa-scissors iLeft"></i> decapitates <i
+                    class="fa-solid fa-dragon iRight"></i></li>
             <!--Lizard eats paper-->
-            <li class="ruleItem"><i class="fa-solid fa-dragon iLeft"></i>
-                <aria-label>Dragon</aria-label>
-                 eats 
-                 <aria-label>Paper</aria-label>
-                 <i class="fa-regular fa-paper-plane iRight"></i>
-            </li>
+            <li class="ruleItem"><i class="fa-solid fa-dragon iLeft"></i> eats <i
+                    class="fa-regular fa-paper-plane iRight"></i></li>
             <!--Paper disproves spock-->
-            <li class="ruleItem"><i class="fa-regular fa-paper-plane iLeft"></i>
-                <aria-label>Paper</aria-label>
-                 disproves 
-                 <aria-label>Spock</aria-label>
-                 <i class="fa-regular fa-hand-spock iRight"></i>
-            </li>
+            <li class="ruleItem"><i class="fa-regular fa-paper-plane iLeft"></i> disproves <i
+                    class="fa-regular fa-hand-spock iRight"></i></li>
             <!-- Spock vaporizes rock-->
-            <li class="ruleItem"><i class="fa-regular fa-hand-spock iLeft"></i>
-                <aria-label>Spock</aria-label>
-                 vaporizes
-                 <aria-label>Rock</aria-label> 
-                 <i class="fa-regular fa-gem iRight"></i>
-            </li>
+            <li class="ruleItem"><i class="fa-regular fa-hand-spock iLeft"></i> vaporizes <i
+                    class="fa-regular fa-gem iRight"></i></li>
             <!-- Rock crushes scissors-->
-            <li class="ruleItem"><i class="fa-regular fa-gem iLeft ruleTen"></i>
-                <aria-label>Rock</aria-label>
-                 crushes 
-                 <aria-label>Scissors</aria-label>
-                 <i class="fa-solid fa-scissors iRight"></i>
-            </li>
+            <li class="ruleItem"><i class="fa-regular fa-gem iLeft ruleTen"></i> crushes <i
+                    class="fa-solid fa-scissors iRight"></i></li>
         </ul>
         <!-- Rules back button-->
-        <aria-label>Back button</aria-label>
         <button class="back-button btn-main">Back</button>
     </div>
     <!-- The settings for the game where the player can toggle between day and night along with how many games the player prefers-->
@@ -178,7 +134,6 @@
         <!-- Day and night toggle-->
         <div class="dayNight">
             <p>Day/Night</p>
-            <aria-label>Switch to change the background from day to night</aria-label>
             <label class="switch">
                 <input type="checkbox" id="day-night-toggler">
                 <span class="slider round"></span>
@@ -187,14 +142,12 @@
         <!-- Match amount toggle-->
         <div class="matchAmount">
             <p>5 / 3</p>
-            <aria-label>Switch to change the match amount from 5 to 3</aria-label>
             <label class="switch">
                 <input type="checkbox" id="match-amount-toggle">
                 <span class="slider round"></span>
             </label>
         </div>
         <!-- Settings back button-->
-        <aria-label>Back button</aria-label>
         <button class="back-button btn-main">Back</button>
     </div>
     <!-- The end of game box displays who won along with the scores -->
@@ -207,7 +160,6 @@
             <p>Player:<span id="final-player-score"></span></p>
         </div>
         <!-- Game over back button-->
-        <aria-label>Retry button</aria-label>
         <button id="retry" class="btn-main"><i class="fa-solid fa-rotate-right"></i></button>
     </div>
 

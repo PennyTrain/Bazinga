@@ -2,7 +2,7 @@
 let gameStartButton = document.getElementById("play");
 gameStartButton.addEventListener('click', playGameModal);
 const gameBoxModal = document.getElementById("game-box");
-const startModal = document.getElementById("start");
+const startModal = document.getElementById("homepage");
 
 // Check if the night mode is set in sessionStorage
 let nightMode = localStorage.getItem("nightMode") === "True";

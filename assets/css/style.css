@@ -326,6 +326,10 @@ button {
     color: darkslateblue;
 }
 
+.game-buttons:hover{
+    color: darkslateblue;
+}
+
 .game-buttons {
     font-size: 7rem;
     border-radius: 10px;
@@ -441,6 +445,10 @@ input:checked+.slider:before {
 
 #player-score {
     text-align: center;
+}
+
+.aria-label {
+display: none;
 }
 
 /*media queries*/
