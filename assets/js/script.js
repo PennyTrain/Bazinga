@@ -139,137 +139,136 @@ function gameLogic(event) {
     computerScore.textContent = `Computer: ${computer}`;
     // Checking the round result
     resultMatch.textContent = checkWin(player, computer);
-    if (resultMatch.textContent == "You Win!") {
+    if (resultMatch.textContent == "Draw!") {
+      resultMatch.style.color = "white";
+    } else if (resultMatch.textContent == "You Win!") {
       resultMatch.style.color = "green";
     } else if (resultMatch.textContent == "You Lose!") {
       resultMatch.style.color = "red";
-    } else if (resultMatch.textContent == "Draw!") {
-      resultMatch.style.color = "white";
     }
   }
-
-  // Checking if rounds played is equal to the match amount
-  if (roundsPlayed === matchAmount) {
-    // Display game over message or perform any necessary actions
-    alert("Selected amount of rounds completed");
-    setTimeout(() => {
-      endGameResults();
-    }, 2000); // 2000 milliseconds = 2 seconds
-  } else {
+    // Checking if rounds played is equal to the match amount
+    if (roundsPlayed === matchAmount) {
+      // Display game over message or perform any necessary actions
+      alert("Selected amount of rounds completed");
+      setTimeout(() => {
+        endGameResults();
+      }, 2000); // 2000 milliseconds = 2 seconds
+    } else {
       // Remove the highlighting after 2 seconds
-    setTimeout(() => {
-      let computerChoiceButton = document.querySelector(`[data-value="${computer}"]`);
-      computerChoiceButton.classList.remove('highlight-computer-choice');
-      allButtons.forEach(button => button.addEventListener('click', gameLogic));
-    }, 2000); // 2000 milliseconds = 2 seconds
-  }
-}
-
-// Assigning the computers choice
-function computerChoice() {
-  roundsPlayed++;
-  const randNum = Math.floor(Math.random() * 5) + 1;
-  switch (randNum) {
-    case 1:
-      computer = "rock";
-      break;
-    case 2:
-      computer = "paper";
-      break;
-    case 3:
-      computer = "scissors";
-      break;
-    case 4:
-      computer = "lizard";
-      break;
-    case 5:
-      computer = "spock";
-      break;
-  }
-  // Adding css affect to the computers choice
-  const computerChoiceButton = document.querySelector(`[data-value="${computer}"]`);
-  computerChoiceButton.classList.add('highlight-computer-choice');
-}
-
-// Calculating who won the round
-function checkWin(player, computer) {
-  if (player === computer) {
-    return "Draw !";
-  } else if (computer === "rock") {
-    if (player === "paper" || player === "spock") {
-      win();
-      return "You Win!";
-    } else {
-      lose();
-      return "You Lose!";
-    }
-  } else if (computer === "paper") {
-    if (player === "scissors" || player === "lizard") {
-      win();
-      return "You Win!";
-    } else {
-      lose();
-      return "You Lose!";
-    }
-  } else if (computer === "scissors") {
-    if (player === "rock" || player === "spock") {
-      win();
-      return "You Win!";
-    } else {
-      lose();
-      return "You Lose!";
-    }
-  } else if (computer === "lizard") {
-    if (player === "rock" || player === "scissors") {
-      win();
-      return "You Win!";
-    } else {
-      lose();
-      return "You Lose!";
-    }
-  } else if (computer === "spock") {
-    if (player === "paper" || player === "lizard") {
-      win();
-      return "You Win!";
-    } else {
-      lose();
-      return "You Lose!";
+      setTimeout(() => {
+        let computerChoiceButton = document.querySelector(`[data-value="${computer}"]`);
+        computerChoiceButton.classList.remove('highlight-computer-choice');
+        allButtons.forEach(button => button.addEventListener('click', gameLogic));
+      }, 2000); // 2000 milliseconds = 2 seconds
     }
   }
-}
 
-// Displaying text if player won
-function win() {
-  userScore++;
-  userScoreBoard.innerHTML = userScore;
-}
-
-// Displaying text if player lost
-function lose() {
-  aiScore++;
-  aiScoreBoard.innerHTML = aiScore;
-}
-
-// Displaying the end results
-function endGameResults() {
-  const endGameBoxModal = document.getElementById("game-end");
-  gameBoxModal.classList.toggle("hidden");
-  endGameBoxModal.classList.toggle("hidden");
-  // Displaying text content for the final scores
-  let finalComputerScore = document.getElementById("final-computer-score");
-  let finalPlayerScore = document.getElementById("final-player-score");
-  finalPlayerScore.textContent = `${userScore}`;
-  finalComputerScore.textContent = `${aiScore}`;
-  // Displaying the final game message and assigning which one to be displayed
-  let finalMessageWin = 'Congrats you won! Smashed It';
-  let finalMessageDraw = 'It was a draw!';
-  let finalMessageLoss = 'Oh no! You lost';
-  let finalMessageContainer = document.getElementById('final-game-messsage');
-  if (aiScore > userScore) {
-    finalMessageContainer.innerText = finalMessageLoss;
-  } else if (aiScore === userScore){
-    finalMessageContainer.innerText = finalMessageDraw;
-  } else {
-    finalMessageContainer.innerText = finalMessageWin;
+  // Assigning the computers choice
+  function computerChoice() {
+    roundsPlayed++;
+    const randNum = Math.floor(Math.random() * 5) + 1;
+    switch (randNum) {
+      case 1:
+        computer = "rock";
+        break;
+      case 2:
+        computer = "paper";
+        break;
+      case 3:
+        computer = "scissors";
+        break;
+      case 4:
+        computer = "lizard";
+        break;
+      case 5:
+        computer = "spock";
+        break;
+    }
+    // Adding css affect to the computers choice
+    const computerChoiceButton = document.querySelector(`[data-value="${computer}"]`);
+    computerChoiceButton.classList.add('highlight-computer-choice');
   }
-}
+
+  // Calculating who won the round
+  function checkWin(player, computer) {
+    if (player === computer) {
+      return "Draw !";
+    } else if (computer === "rock") {
+      if (player === "paper" || player === "spock") {
+        win();
+        return "You Win!";
+      } else {
+        lose();
+        return "You Lose!";
+      }
+    } else if (computer === "paper") {
+      if (player === "scissors" || player === "lizard") {
+        win();
+        return "You Win!";
+      } else {
+        lose();
+        return "You Lose!";
+      }
+    } else if (computer === "scissors") {
+      if (player === "rock" || player === "spock") {
+        win();
+        return "You Win!";
+      } else {
+        lose();
+        return "You Lose!";
+      }
+    } else if (computer === "lizard") {
+      if (player === "rock" || player === "scissors") {
+        win();
+        return "You Win!";
+      } else {
+        lose();
+        return "You Lose!";
+      }
+    } else if (computer === "spock") {
+      if (player === "paper" || player === "lizard") {
+        win();
+        return "You Win!";
+      } else {
+        lose();
+        return "You Lose!";
+      }
+    }
+  }
+
+  // Displaying text if player won
+  function win() {
+    userScore++;
+    userScoreBoard.innerHTML = userScore;
+  }
+
+  // Displaying text if player lost
+  function lose() {
+    aiScore++;
+    aiScoreBoard.innerHTML = aiScore;
+  }
+
+  // Displaying the end results
+  function endGameResults() {
+    const endGameBoxModal = document.getElementById("game-end");
+    gameBoxModal.classList.toggle("hidden");
+    endGameBoxModal.classList.toggle("hidden");
+    // Displaying text content for the final scores
+    let finalComputerScore = document.getElementById("final-computer-score");
+    let finalPlayerScore = document.getElementById("final-player-score");
+    finalPlayerScore.textContent = `${userScore}`;
+    finalComputerScore.textContent = `${aiScore}`;
+    // Displaying the final game message and assigning which one to be displayed
+    let finalMessageWin = 'Congrats you won! Smashed It';
+    let finalMessageDraw = 'It was a draw!';
+    let finalMessageLoss = 'Oh no! You lost';
+    let finalMessageContainer = document.getElementById('final-game-messsage');
+    if (aiScore > userScore) {
+      finalMessageContainer.innerText = finalMessageLoss;
+    } else if (aiScore === userScore) {
+      finalMessageContainer.innerText = finalMessageDraw;
+    } else {
+      finalMessageContainer.innerText = finalMessageWin;
+    }
+  }

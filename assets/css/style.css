@@ -435,7 +435,13 @@ input:checked+.slider:before {
 }
 
 /*Media queries*/
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 376px) {
+    .rules h2 {
+        font-size: 1.6rem;
+    }
+    .rules li {
+        gap: 1rem;
+    }
 
     #game-buttons button {
         font-size: 4rem;
