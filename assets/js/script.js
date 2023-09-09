@@ -45,7 +45,7 @@ allBackButtons.forEach(backButton => {
 });
 // Adding event listeners all game buttons
 allButtons.forEach(button => {
-  button.addEventListener('click', gameLogic)
+  button.addEventListener('click', gameLogic);
 });
 
 // Check if the night mode is set in localStorage
@@ -141,10 +141,10 @@ function gameLogic(event) {
     resultMatch.textContent = checkWin(player, computer);
     if (resultMatch.textContent == "You Win!") {
       resultMatch.style.color = "green";
-    } else if (resultMatch.textContent == "Draw!") {
-      resultMatch.style.color = "white";
     } else if (resultMatch.textContent == "You Lose!") {
       resultMatch.style.color = "red";
+    } else if (resultMatch.textContent == "Draw!") {
+      resultMatch.style.color = "white";
     }
   }
 
@@ -163,7 +163,7 @@ function gameLogic(event) {
       allButtons.forEach(button => button.addEventListener('click', gameLogic));
     }, 2000); // 2000 milliseconds = 2 seconds
   }
-};
+}
 
 // Assigning the computers choice
 function computerChoice() {
