@@ -488,9 +488,7 @@ display: none;
     }
 
     .rules {
-        gap: .3rem;
-        padding: 2rem;
-        width: 80%;
+        
     }
 
     .rules li {
