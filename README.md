@@ -209,6 +209,12 @@ Bungee, sans-serif are being used to keep the website clear, the fonts were foun
 ---
 ![Microsoft edge browser screenshot](./assets/imgs/testing-images/microsoft-edge-test.png)
 
+### Notable Bugs
+---
+* During testing I noticed that there was nothing stopping the player from wizzing through the game very fast. Therefore I disabled the buttons while the computer was making its choices.
+
+* During testing I noticed that when the 3 games were toggled on, the switch did not stay turned on however 3 games was saved, therefore when the switch was clicked again it was just reassigning 3 games. Meaning once 3 games was clicked you could not return to 5 games. I fixed this by checking whether it was 3 or 5 games in the showSettings function.
+
  ## Deployment
 ---
 The project was deployed to GitHub Pages using the following steps...
@@ -221,7 +227,7 @@ The project was deployed to GitHub Pages using the following steps...
 5. The page will automatically refresh.
 6. Scroll back down through the page to locate the now published site [link](https://github.com) in the "GitHub Pages" section.
 
-* The live link can be found here. 
+* The live link can be found here.
 
 ### Making a Local Clone
 
