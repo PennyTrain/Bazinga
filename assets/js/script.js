@@ -1,8 +1,52 @@
-// Labeling of the start of the game and getting the element
-let gameStartButton = document.getElementById("play");
-gameStartButton.addEventListener('click', playGameModal);
+// Global variables
+let roundsPlayed = 0;
+let matchAmount = 0;
+let gameAmount = 0;
+let aiScore = 0;
+let userScore = 0;
+let computer;
+
+// Declaring variables for the game logic
+const resultMatch = document.querySelector('#match-result');
+const playerScore = document.querySelector('#player-score');
+const computerScore = document.querySelector('#computer-score');
+const allButtons = document.querySelectorAll('.game-buttons');
+const gameStartButton = document.getElementById("play");
 const gameBoxModal = document.getElementById("game-box");
 const startModal = document.getElementById("homepage");
+const themeToggler = document.getElementById('day-night-toggler');
+const allBackButtons = document.querySelectorAll('.back-button');
+const rulesModal = document.getElementById("rules");
+const rulesButton = document.getElementById("rulesButton");
+const settingBoxModal = document.getElementById("settings-box");
+const settingsButton = document.getElementById("settingsButton");
+const retryButton = document.getElementById("retry");
+const matchToggle = document.getElementById("match-amount-toggle");
+const aiScoreBoard = document.getElementById("ai-score");
+const userScoreBoard = document.getElementById("user-score");
+
+// Adding event listeners
+// Add click to playGameModal
+gameStartButton.addEventListener('click', playGameModal);
+// Add change to toggle night mode on and off
+themeToggler.addEventListener("change", toggleNightMode);
+// Add click to show the rules
+rulesButton.addEventListener('click', showRules);
+// Add click to show the settings
+settingsButton.addEventListener('click', showSettings);
+// Add click to take player to main menu
+retryButton.addEventListener('click', mainMenu);
+// Add change to toggle the amount of games
+matchToggle.addEventListener('change', amountOfGames);
+
+// Add event listener to all the back buttons
+allBackButtons.forEach(backButton => {
+  backButton.addEventListener('click', mainMenu);
+});
+// Adding event listeners all game buttons
+allButtons.forEach(button => {
+  button.addEventListener('click', gameLogic)
+});
 
 // Check if the night mode is set in localStorage
 let nightMode = localStorage.getItem("nightMode") === "True";
@@ -31,30 +75,10 @@ function toggleNightMode() {
 // Apply the initial night mode state
 setNightMode(nightMode);
 
-// Add event listener to the theme toggler
-let themeToggler = document.getElementById('day-night-toggler');
-themeToggler.addEventListener("change", toggleNightMode);
-
 // Handle page reload
 window.addEventListener("load", () => {
   setNightMode(nightMode);
 });
-
-// Get all the back buttons and add event listener
-let allBackButtons = document.querySelectorAll('.back-button');
-allBackButtons.forEach(backButton => {
-  backButton.addEventListener('click', mainMenu);
-});
-
-// Rules modal and event listeners
-const rulesModal = document.getElementById("rules");
-const rulesButton = document.getElementById("rulesButton");
-rulesButton.addEventListener('click', showRules);
-
-// Settings modal and event listeners
-const settingBoxModal = document.getElementById("settings-box");
-const settingsButton = document.getElementById("settingsButton");
-settingsButton.addEventListener('click', showSettings);
 
 // Display the settings
 function showSettings() {
@@ -79,30 +103,12 @@ function showRules() {
   rulesModal.classList.toggle("hidden");
 }
 
-// Enables the retry button to go to the main menu
-let retryButton = document.getElementById("retry");
-retryButton.addEventListener('click', mainMenu);
-
 // Displays the main menu by refreshing the page 
 function mainMenu() {
   location.reload();
 }
 
-// Declaring variables for the game logic
-const resultMatch = document.querySelector('#match-result');
-const playerScore = document.querySelector('#player-score');
-const computerScore = document.querySelector('#computer-score');
-let allButtons = document.querySelectorAll('.game-buttons');
-let result;
-let player;
-let computer;
-let roundsPlayed = 0;
-let matchAmount = 0;
-let gameAmount = 0;
-
 // Checking the amount of games
-let matchToggle = document.getElementById("match-amount-toggle");
-matchToggle.addEventListener('change', amountOfGames);
 function amountOfGames(matchAmount) {
   if (matchToggle.checked) {
     matchAmount = 3;
@@ -112,9 +118,6 @@ function amountOfGames(matchAmount) {
     localStorage.setItem("gameAmount", "5");
   }
 }
-
-// Adding event listeners
-allButtons.forEach(button => button.addEventListener('click', gameLogic));
 
 // Main game logic
 function gameLogic(event) {
@@ -126,10 +129,10 @@ function gameLogic(event) {
     matchAmount = 5;
   }
 
-// Checking if the rounds played is less than the match amount
+  // Checking if the rounds played is less than the match amount
   if (roundsPlayed <= matchAmount) {
     button = event.target;
-    player = button.getAttribute('data-value');
+    let player = button.getAttribute('data-value');
     computerChoice();
     // Adding player and computer text content
     playerScore.textContent = `Player: ${player}`;
@@ -234,12 +237,6 @@ function checkWin(player, computer) {
     }
   }
 }
-
-// Declaring variables for the score board
-let aiScoreBoard = document.getElementById("ai-score");
-let aiScore = 0;
-let userScoreBoard = document.getElementById("user-score");
-let userScore = 0;
 
 // Displaying text if player won
 function win() {
