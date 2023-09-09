@@ -487,12 +487,26 @@ display: none;
         font-size: 4rem;
     }
 
-    .rules {
-        
+    .back-button{
+        font-size: 1.3rem;
+        height: 3.6rem;
+        width: 7rem;
     }
 
+    .rules .iLeft {
+        margin-right: 1rem;
+    }
+    
+    .rules .iRight {
+        margin-left: 1rem;
+    }
+    
     .rules li {
         font-size: 1.2rem;
+    }
+
+    .ruleItem:hover{
+        font-size: 1.4rem;
     }
 
     .game-tags {
@@ -508,14 +522,6 @@ display: none;
         display: none;
     }
 
-    .iLeft {
-        margin-right: .2rem;
-    }
-
-    .iRight {
-        margin-left: .2rem;
-    }
-
     .gamebox-header {
         font-size: 2.5rem;
     }
@@ -525,15 +531,27 @@ display: none;
         width: 80%;
     }
 
+    .btn-main {
+        height: 5rem;
+        width: 7rem;
+        font-size: 30px;
+        border-radius: 10px;
+        font-family: bungee, sans-serif;
+        color: black;
+    }
+
+    .gamepage-back-button {
+        height: 2rem;
+        width: 2rem;
+        font-size: .6rem;
+        float: right;
+    }
+
 }
 
 @media screen and (max-width: 700px) {
     div .hide-icon {
         display: none;
-    }
-
-    .rules li {
-        font-size: 1rem;
     }
 
     .game-end-container h2 {
@@ -546,6 +564,16 @@ display: none;
     
     .game-end-container .final-message {
         font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .rules li {
+        font-size: 1.2rem;
+    }
+
+    .ruleItem:hover{
+        font-size: 1.4rem;
     }
 }
 
