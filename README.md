@@ -199,6 +199,16 @@ Bungee, sans-serif are being used to keep the website clear, the fonts were foun
 --- 
 ![Lighthouse report](./assets/imgs/testing-images/lighthouse-test.png)
 
+* Different browser windows
+---
+* Chrome browser window
+---
+![Chrome browser screenshot](./assets/imgs/testing-images/chrome-test.png)
+
+* Microsoft edge browser window
+---
+![Microsoft edge browser screenshot](./assets/imgs/testing-images/microsoft-edge-test.png)
+
  ## Deployment
 ---
 The project was deployed to GitHub Pages using the following steps...
