@@ -235,7 +235,7 @@ function checkWin(player, computer) {
   }
 }
 
-// Declarinf variables for the score board
+// Declaring variables for the score board
 let aiScoreBoard = document.getElementById("ai-score");
 let aiScore = 0;
 let userScoreBoard = document.getElementById("user-score");
@@ -253,15 +253,17 @@ function lose() {
   aiScoreBoard.innerHTML = aiScore;
 }
 
-// Displaying the end 
+// Displaying the end results
 function endGameResults() {
   const endGameBoxModal = document.getElementById("game-end");
   gameBoxModal.classList.toggle("hidden");
   endGameBoxModal.classList.toggle("hidden");
+  // Displaying text content for the final scores
   let finalComputerScore = document.getElementById("final-computer-score");
   let finalPlayerScore = document.getElementById("final-player-score");
   finalPlayerScore.textContent = `${userScore}`;
   finalComputerScore.textContent = `${aiScore}`;
+  // Displaying the final game message and assigning which one to be displayed
   let finalMessageWin = 'Congrats you won! Smashed It';
   let finalMessageDraw = 'It was a draw!';
   let finalMessageLoss = 'Oh no! You lost';
